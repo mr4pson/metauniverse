@@ -4,6 +4,7 @@ import { headerLinks } from './constants';
 import styles from './header.module.scss';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
+import Image from 'next/image';
 
 const Header = (): JSX.Element => {
   const router = useRouter();
@@ -12,7 +13,7 @@ const Header = (): JSX.Element => {
     <div className={styles["header-wrapper"]}>
       <div className={styles["header"]}>
         <div className={styles["header__logo-links-wrapper"]}>
-          <div className={styles['header__logo']} />
+          <Image src="/assets/Logo.png" alt="me" width="67" height="53" />
           <div className={styles['header__links']}>
             {
               headerLinks.map(linkGroup => (
