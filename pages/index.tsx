@@ -1,3 +1,4 @@
+import { Header } from 'modules';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Page, paths } from 'routes/constants';
@@ -13,9 +14,11 @@ const IndexPage = (): JSX.Element => {
           content="Next.js + SWR codebase containing realworld examples (CRUD, auth, advanced patterns, etc) that adheres to the realworld spec and API"
         />
       </Head>
-      <div className={styles["index-page"]}>
-        Index page
-        <Link href={paths[Page.TEST]}>Test page</Link>
+      <Header />
+      <div className={styles['page-wrapper']}>
+        <div className={styles["index-page"]}>
+          What's a Dendy Metaverse ?
+        </div>
       </div>
     </>
   );
