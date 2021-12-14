@@ -25,7 +25,7 @@
   &__links {
     width: 620px;
     display: flex;
-    justify-content: space-between;
+    gap: 18px;
   }
 
   &__link-group {
@@ -45,6 +45,9 @@
 
   &__link {
     color: #ffffff;
+    font-family: "SFProText";
+    font-weight: 700;
+    font-size: 14px;
 
     &_active {
       color: #02ffb9;
