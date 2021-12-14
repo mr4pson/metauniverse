@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "SFProText";
+  font-weight: 900;
+  src: url("./assets/fonts/SF/SFUIText-Heavy.ttf");
+}
+
+@font-face {
+  font-family: "SFProText";
+  font-weight: 700;
+  src: url("./assets/fonts/SF/SFUIText-Bold.ttf");
+}
+
+@font-face {
+  font-family: "VT323-Regular";
+  font-weight: 700;
+  src: url("./assets/fonts/VT323/VT323-Regular.ttf");
+}
