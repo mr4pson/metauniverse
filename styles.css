@@ -16,6 +16,6 @@ body {
 
 @font-face {
   font-family: "VT323-Regular";
-  font-weight: 700;
+  font-weight: 400;
   src: url("./assets/fonts/VT323/VT323-Regular.ttf");
 }
