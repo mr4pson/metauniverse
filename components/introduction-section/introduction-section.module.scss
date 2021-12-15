@@ -1,0 +1,38 @@
+.introduction-section {
+  width: 100%;
+  padding: 97px 0 0;
+  background-image: url('/icons/introduction-section-bg.svg');
+  background-size: cover;
+}
+
+.page-title {
+  &__top {
+    margin-top: 94px;
+  }
+  &__bottom {
+    margin-top: 22px;
+    font-family: "SFProText";
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 1.03;
+    letter-spacing: -1.3px;
+    z-index: 1;
+    text-shadow: -3px -2px 1px black, -2px -2px 0 black, 1px -1px 0 black,
+      -4px -3px 1px #02ffb9;
+  }
+  &__shadow {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: -1px;
+  }
+}
+
+.page-description {
+  margin: 35px 0 86px;
+  max-width: 382px;
+  color: #02ffb9;
+  font-size: 20px;
+  font-family: 'VT323-Regular';
+  line-height: 1.25;
+}
