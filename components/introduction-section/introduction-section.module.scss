@@ -2,7 +2,9 @@
   width: 100%;
   padding: 97px 0 0;
   background-image: url('/icons/introduction-section-bg.svg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .page-title {
