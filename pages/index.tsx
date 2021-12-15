@@ -1,9 +1,7 @@
-import { Header } from 'modules';
+import { Header, PageTitle } from 'modules';
 import Head from 'next/head';
-import Link from 'next/link';
 import { RightArrowIcon } from 'public/icons';
-import { Page, paths } from 'routes/constants';
-import { Button, Icon } from 'ui-kit';
+import { Button } from 'ui-kit';
 import styles from './index.module.scss';
 
 const IndexPage = (): JSX.Element => {
@@ -20,7 +18,8 @@ const IndexPage = (): JSX.Element => {
       <div className={styles['page-wrapper']}>
         <div className={styles["index-page"]}>
           <div className={styles["page-title"]}>
-            <div className={styles["page-title__label"]}>What's a<br/> Metaverse?</div>
+            <PageTitle className={styles["page-title__top"]} normalText={"What's a"} wrappedText={"Dendy"} />
+            <div className={styles["page-title__bottom"]}>Metaverse?</div>
           </div>
           <div className={styles['page-description']}>
             The Dendy Metaverse is an innovative DeFi game platform based on the Play to Earn concept. 
