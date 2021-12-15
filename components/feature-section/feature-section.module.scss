@@ -1,4 +1,4 @@
-.introduction-section {
+.feature-section {
   width: 100%;
   padding: 97px 0 0;
   background-image: url('/icons/introduction-section-bg.svg');
@@ -21,12 +21,8 @@
     }
   }
 
-  &__page-description {
-    margin: 35px 0 86px;
-    max-width: 382px;
-    color: #02ffb9;
-    font-size: 20px;
-    font-family: 'VT323-Regular';
-    line-height: 1.25;
+  &__footer {
+    display: flex;
+    justify-content: center;
   }
 }
