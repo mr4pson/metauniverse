@@ -12,23 +12,17 @@
 }
 
 .page-title {
-  margin-top: 50px;
-  position: relative;
-  &__label {
-    position: relative;
+  &__top {
+    margin-top: 94px;
+  }
+  &__bottom {
+    margin-top: 22px;
     font-family: "SFProText";
     font-weight: 900;
     font-size: 70px;
     line-height: 1.03;
     letter-spacing: -1.3px;
     z-index: 1;
-    // text-shadow: -4px -2px 1px black, 2px 2px 0 black, -1px 1px 0 black, 3px 3px 0 red;
     text-shadow: -3px -2px 1px black, -2px -2px 0 black, 1px -1px 0 black, -4px -3px 1px #02FFB9;
-  }
-  &__shadow {
-    display: none;
-    position: absolute;
-    top: 5px;
-    left: -1px;
   }
 }
