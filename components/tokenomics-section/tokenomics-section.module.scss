@@ -1,0 +1,63 @@
+.tokenomics-section {
+  &__body {
+
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 96px;
+  }
+}
+
+.game-features {
+  margin-top: 64px;
+  $self: &;
+  display: flex;
+  align-items: center;
+  &__left {
+    margin-right: 140px;
+    margin-left: 33px;
+  }
+  &__right {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 84px;
+  }
+}
+
+.burnt-info {
+  width: 125px;
+  &__title {
+    margin-top: 21px;
+    color: #02ffb9;
+    font-family: "SFProText";
+    font-weight: 900;
+    font-size: 20px;
+  }
+}
+
+.game-feature {
+  &__title {
+    font-family: 'VT323-Regular';
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+  }
+}
+
+.total-taxes {
+  display: flex;
+  align-items: center;
+  padding-right: 47px;
+  &__label {
+    font-size: 40px;
+    line-height: 50px;
+    font-family: "SFProText";
+    font-weight: 900;
+    margin-left: 20px;
+  }
+}
