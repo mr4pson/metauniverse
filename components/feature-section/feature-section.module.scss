@@ -1,8 +1,5 @@
 .feature-section {
   width: 100%;
-  padding: 97px 0 0;
-  background-image: url('/icons/introduction-section-bg.svg');
-  background-size: cover;
 
   &__page-title {
     &_top {
@@ -22,7 +19,17 @@
   }
 
   &__footer {
+    margin-top: 87px;
     display: flex;
     justify-content: center;
+  }
+}
+
+.feature-section {
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 45px 150px;
   }
 }

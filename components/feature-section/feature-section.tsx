@@ -1,17 +1,31 @@
-import { Header, PageTitle } from 'modules';
+import { SectionTitle } from 'modules';
 import { RightArrowIcon } from 'public/icons';
-import { memo } from 'react';
 import { Button } from 'ui-kit';
+import { features } from './constants';
+import FeatureSectionItem from './feature-section-item';
 import styles from './feature-section.module.scss';
 
 const FeatureSection = (): JSX.Element => {
   return (
     <div className={styles["feature-section"]}>
       <div className={"container"}>
-        <div className={styles["feature-section__page-title"]}>
-          <PageTitle className={styles["feature-section__page-title_top"]} normalText="Our" wrappedText="Features" />
+        <SectionTitle
+          normalText="Our"
+          wrappedText="Features"
+          titleInfo="Decentralized open-source metaverse based on the blockchain Binance Smart Chain"
+        />
+        <div className={styles['feature-section__body']}>
+          {
+            features.map((feature) => (
+              <FeatureSectionItem
+                key={feature.id}
+                icon={feature.icon}
+                title={feature.title}
+                text={feature.text}
+              />
+            ))
+          }
         </div>
-
         <div className={styles['feature-section__footer']}>
           <Button
             icon={

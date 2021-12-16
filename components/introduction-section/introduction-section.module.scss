@@ -1,8 +1,17 @@
 .introduction-section {
   width: 100%;
   padding: 97px 0 0;
-  background-image: url('/icons/introduction-section-bg.svg');
-  background-size: cover;
+  border-bottom: solid 1.5px #02ffb9;
+  
+  &__wrapper {
+    max-width: 1200px;
+    margin: auto;
+    background-image: url(/icons/introduction-section-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+  }
 
   &__page-title {
     &_top {
@@ -28,5 +37,9 @@
     font-size: 20px;
     font-family: 'VT323-Regular';
     line-height: 1.25;
+  }
+
+  &__footer {
+    padding-bottom: 109px;
   }
 }
