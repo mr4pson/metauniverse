@@ -1,5 +1,3 @@
-import { TypeIcon } from './types';
-
 export const RightArrowIcon = (): JSX.Element => (
   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="21" viewBox="0 0 14 21" fill="none">
   <g filter="url(#filter0_d_0_95)">

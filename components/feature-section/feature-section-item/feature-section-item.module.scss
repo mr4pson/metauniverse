@@ -1,0 +1,23 @@
+.feature-section-item {
+  width: 170px;
+  margin-top: 45px;
+
+  &__icon {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 20px 0 10px;
+    font-family: 'SFPro';
+    font-weight: 900;
+    color: #02ffb9;
+    height: 45px;
+  }
+
+  &__text {
+    font-family: 'VT323-Regular';
+    color: #ffffff;
+  }
+}

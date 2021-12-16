@@ -3,6 +3,13 @@ body {
 }
 
 @font-face {
+  font-family: "SFPro";
+  font-weight: 900;
+  src: url("./assets/fonts/SF/SFProDisplay-Bold.ttf");
+}
+
+
+@font-face {
   font-family: "SFProText";
   font-weight: 900;
   src: url("./assets/fonts/SF/SFUIText-Heavy.ttf");
@@ -22,6 +29,6 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 913px;
   margin: auto;
 }
