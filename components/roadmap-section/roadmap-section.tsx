@@ -18,8 +18,8 @@ const RoadmapSection = (): JSX.Element => {
         />
         <div className={styles['roadmap-section__body']}>
           <div className={styles["map-items"]}>
-            {mapPoints.map(mapPoint => (
-              <MapItem {...mapPoint} />
+            {mapPoints.map((mapPoint, index) => (
+              <MapItem key={`map-item-${index}`} {...mapPoint} />
             ))}
           </div>
         </div>
