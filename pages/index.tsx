@@ -1,9 +1,10 @@
-import { Header, PageTitle } from 'modules';
-import Head from 'next/head';
-import styles from './index.module.scss';
-import IntroductionSection from '../components/introduction-section';
 import FeatureSection from 'components/feature-section';
+import RoadmapSection from 'components/roadmap-section';
 import TokenomicsSection from 'components/tokenomics-section';
+import { Header } from 'modules';
+import Head from 'next/head';
+import IntroductionSection from '../components/introduction-section';
+import styles from './index.module.scss';
 
 const IndexPage = (): JSX.Element => {
   return (
@@ -20,6 +21,7 @@ const IndexPage = (): JSX.Element => {
         <IntroductionSection />
         <FeatureSection />
         <TokenomicsSection />
+        <RoadmapSection />
       </div>
     </>
   );

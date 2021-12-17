@@ -1,0 +1,15 @@
+.roadmap-section {
+  border-bottom: solid 1.5px #02ffb9;
+}
+
+.map-items {
+  padding-left: 200px;
+  &::after {
+    display: block;
+    content: "";
+    height: 138px;
+    width: 1.5px;
+    background: #02ffb9;
+    margin-left: 10px;
+  }
+}
