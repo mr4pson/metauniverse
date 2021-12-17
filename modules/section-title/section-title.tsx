@@ -1,7 +1,6 @@
-import { Header, PageTitle } from 'modules';
-import { RightArrowIcon } from 'public/icons';
-import { memo } from 'react';
-import { Button } from 'ui-kit';
+import { DECREMENTAL_VALUE, INCREMENTAL_VALUE } from 'common/constants';
+import { PageTitle } from 'modules';
+import { LeftArrowIcon, RightArrowIcon } from 'public/icons';
 import styles from './section-title.module.scss';
 
 type Props = {
@@ -9,6 +8,7 @@ type Props = {
   wrappedText: string;
   titleInfo: string | JSX.Element;
   withControls?: boolean;
+  handleChooseNftIndex?: (updatingValue: number) => void
 }
 
 const SectionTitle = ({
@@ -16,14 +16,32 @@ const SectionTitle = ({
   wrappedText,
   titleInfo,
   withControls,
+  handleChooseNftIndex,
 }: Props): JSX.Element => {
+
   return (
     <div className={styles["section-title"]}>
       <div className={styles["section-title__wrapper"]}>
         <div className={styles["section-title__info"]}>
-          <span className={styles["section-title__info-text"]}>
+          <div className={styles["section-title__info-text"]}>
             {titleInfo}
-          </span>
+          </div>
+          {
+            withControls && <div className={styles["section-title__controls"]}>
+              <button
+                className={styles["section-title__controls-btn"]}
+                onClick={() => handleChooseNftIndex && handleChooseNftIndex(DECREMENTAL_VALUE)}
+              >
+                <LeftArrowIcon />
+              </button>
+              <button
+                className={styles["section-title__controls-btn"]}
+                onClick={() => handleChooseNftIndex && handleChooseNftIndex(INCREMENTAL_VALUE)} 
+              >
+                <RightArrowIcon />
+              </button>
+            </div>
+          }
         </div>
         <div className={styles["page-title"]}>
           <PageTitle

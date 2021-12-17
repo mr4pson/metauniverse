@@ -3,35 +3,16 @@
   padding-bottom: 87px;
   border-bottom: solid 1.5px #02ffb9;
 
-  &__page-title {
-    &_top {
-      margin-top: 94px;
-    }
-    &_bottom {
-      margin-top: 22px;
-      font-family: "SFProText";
-      font-weight: 900;
-      font-size: 70px;
-      line-height: 1.03;
-      letter-spacing: -1.3px;
-      z-index: 1;
-      text-shadow: -3px -2px 1px black, -2px -2px 0 black, 1px -1px 0 black,
-        -4px -3px 1px #02ffb9;
-    }
-  }
-
-  &__footer {
-    margin-top: 87px;
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.feature-section {
   &__body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 45px 150px;
+  }
+
+  &__footer {
+    margin: 87px 0;
+    display: flex;
+    justify-content: center;
   }
 }

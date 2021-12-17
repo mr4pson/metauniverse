@@ -1,0 +1,67 @@
+.our-nfts-section {
+  width: 100%;
+  border-bottom: solid 1.5px #02ffb9;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  &__footer {
+    margin: 87px 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.our-nfts-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+  width: 244px;
+  border: 2px solid transparent;
+  border-bottom: 12px solid transparent;
+
+  &_active {
+    border: 2px solid #02ffb9;
+    border-bottom: 12px solid #02ffb9;
+    background-color: rgba($color: #02ffb9, $alpha: 0.25);
+  }
+  
+  &:hover {
+    cursor: pointer;
+    border: 2px solid #02ffb9;
+    background-color: rgba($color: #02ffb9, $alpha: 0.09);
+    border-bottom: 12px solid rgba($color: #02ffb9, $alpha: 0.25);
+  }
+
+  &__image-wrapper {
+    padding: 10px;
+    border: 2px solid #02ffb9;
+    background-color: #000000;
+  }
+
+  &__image {
+    width: 214px;
+    height: 160px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__info {
+    margin: 15px 0 10px;
+    font-size: 15px;
+    color: #02ffb9;
+    font-family: 'VT323-Regular';
+  }
+
+  &__title {
+    margin: 0;
+    font-family: 'SFProText';
+    font-size: 20px;
+    color: #ffffff;
+  }
+}
