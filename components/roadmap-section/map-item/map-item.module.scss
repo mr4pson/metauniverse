@@ -1,0 +1,109 @@
+.map-item {
+  $self: &;
+  position: relative;
+
+  &:first-child::before {
+    height: 170px;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 21px;
+    width: 205px;
+    height: 98px;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    font-size: 18px;
+    color: #02ffb9;
+    font-family: 'VT323-Regular';
+  }
+
+  &__date {
+    margin-top: 9px;
+    font-size: 19px;
+    font-family: "SFProText";
+    font-weight: 900;
+    color: #fff;
+  }
+
+  &__round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 21px;
+    height: 21px;
+    padding: 2px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 0 #02ffb9;
+    background-image: linear-gradient(to bottom, #a1ffe5 0%, #02ffb9);
+    &--active {
+      padding: 3px;
+      #{ $self }__inner-round {
+        width: 15px;
+        height: 15px;
+        background-image: linear-gradient(to bottom, #a1ffe5 0%, #02ffb9);
+      }
+    }
+  }
+
+  &__inner-round {
+    width: 17px;
+    height: 17px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    background: #000;
+    border-radius: 50%;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    height: 98px;
+    width: 1.5px;
+    background: #02ffb9;
+    margin-left: 10px;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    width: 205px;
+    border-bottom-style: solid;
+    border-bottom-width: 1.5px;
+    border-image-slice: 1;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  &--left {
+    &::after {
+      border-image-source: linear-gradient(to right, rgba(0, 255, 184, 0), #05ffdd 43%);
+      left: -205px;
+    }
+    #{ $self }__info {
+      left: -195px;
+      text-align: right;
+      padding-right: 46px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &--right {
+    &::after {
+      border-image-source: linear-gradient(to right, #05ffdd 53%, rgba(0, 255, 184, 0) 105%);
+      left: 21px;
+    }
+    #{ $self }__info {
+      left: 13px;
+      text-align: left;
+      padding-left: 46px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

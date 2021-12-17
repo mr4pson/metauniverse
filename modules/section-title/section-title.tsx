@@ -6,7 +6,7 @@ import styles from './section-title.module.scss';
 type Props = {
   normalText: string;
   wrappedText: string;
-  titleInfo: string;
+  titleInfo: string | JSX.Element;
   withControls?: boolean;
   handleChooseNftIndex?: (updatingValue: number) => void
 }
