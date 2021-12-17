@@ -1,4 +1,5 @@
 export { RightArrowIcon } from './right-arrow-icon';
+export { LeftArrowIcon } from './left-arrow-icon';
 export { PlayIcon } from './play-icon';
 export { NftIcon } from './nft-icon';
 export { LockIcon } from './lock-icon';

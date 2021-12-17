@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styles from './index.module.scss';
 import IntroductionSection from '../components/introduction-section';
 import FeatureSection from 'components/feature-section';
+import OurNftsSection from 'components/our-nfts-section';
 
 const IndexPage = (): JSX.Element => {
   return (
@@ -18,6 +19,7 @@ const IndexPage = (): JSX.Element => {
       <div className={styles['page-wrapper']}>
         <IntroductionSection />
         <FeatureSection />
+        <OurNftsSection />
       </div>
     </>
   );
