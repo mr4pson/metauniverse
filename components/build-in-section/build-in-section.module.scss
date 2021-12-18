@@ -1,0 +1,59 @@
+.build-in-section {
+  width: 100%;
+  border-bottom: solid 1.5px #02ffb9;
+
+
+  &__page-title {
+    & > div {
+      font-size: 64px;
+    }
+
+    & > div:last-of-type {
+      margin-left: 10px;
+    }
+  }
+
+  &__body-row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__build-in-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 21px 0 59px;
+  }
+
+  &__next-generation-img-wrapper, &__build-in-img-wrapper {
+    width: 207px;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #02ffb9;
+    background-color: rgba($color: #02ffb9, $alpha: 0.25);
+  }
+
+  &__next-generation-img, &__build-in-img {
+    width: 119px;
+    height: 110px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__next-generation-img {
+    background-image: url('/assets/Arrows.png');
+  }
+  &__build-in-img {
+    background-image: url('/assets/IDO.png');
+  }
+
+  &__next-generation-text, &__build-in-text {
+    margin-left: 31px;
+    font-family: 'SFProText';
+    font-size: 22px;
+    color: #ffffff;
+    max-width: 400px;
+  }
+}

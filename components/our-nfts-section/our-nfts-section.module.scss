@@ -32,7 +32,7 @@
   
   &:hover {
     cursor: pointer;
-    border: 2px solid #02ffb9;
+    border: 2px solid rgba($color: #02ffb9, $alpha: 0.09);
     background-color: rgba($color: #02ffb9, $alpha: 0.09);
     border-bottom: 12px solid rgba($color: #02ffb9, $alpha: 0.25);
   }
