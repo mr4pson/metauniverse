@@ -7,8 +7,11 @@ import { nfts } from './constants';
 import OurNftsSectionItem from './our-nfts-section-item';
 import styles from './our-nfts-section.module.scss';
 import { TypeChosenNft } from './types';
+import { useRouter } from 'next/router';
 
 const OurNftsSection = (): JSX.Element => {
+  const router = useRouter();
+  
   const [chosenNft, setChosenNft] = useState<TypeChosenNft>({
     index: nfts[0].index,
     link: nfts[0].link,
@@ -33,7 +36,7 @@ const OurNftsSection = (): JSX.Element => {
   }
 
   const openInNewTab = (): void => {
-    window.open(chosenNft.link)
+    router.push(chosenNft.link);
   }
 
   return (
@@ -63,7 +66,7 @@ const OurNftsSection = (): JSX.Element => {
             icon={
               <RightArrowIcon />
             }
-            onClick={openInNewTab}
+            onClick={() => openInNewTab()}
           >
             Go to the marketplace
           </Button>

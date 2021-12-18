@@ -7,6 +7,7 @@ import FeatureSection from 'components/feature-section';
 import OurNftsSection from 'components/our-nfts-section';
 import styles from './index.module.scss';
 import BuildInSection from 'components/build-in-section';
+import OurPartnersSection from 'components/our-partners-section';
 
 const IndexPage = (): JSX.Element => {
   return (
@@ -26,6 +27,7 @@ const IndexPage = (): JSX.Element => {
         <TokenomicsSection />
         <RoadmapSection />
         <BuildInSection />
+        <OurPartnersSection />
       </div>
     </>
   );
