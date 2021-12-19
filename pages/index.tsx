@@ -9,8 +9,14 @@ import styles from './index.module.scss';
 import BuildInSection from 'components/build-in-section';
 import OurPartnersSection from 'components/our-partners-section';
 import FaqSection from 'components/faq-section';
+import { ScrollTopIcon } from 'public/icons';
+import PageFooter from 'components/page-footer';
 
 const IndexPage = (): JSX.Element => {
+  function goToTopOfPage(): void {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
+
   return (
     <>
       <Head>
@@ -30,6 +36,13 @@ const IndexPage = (): JSX.Element => {
         <BuildInSection />
         <OurPartnersSection />
         <FaqSection />
+        <button
+          className={styles["scroll-top-btn"]}
+          onClick={goToTopOfPage}
+        >
+          <ScrollTopIcon />
+        </button>
+        <PageFooter />
       </div>
     </>
   );
