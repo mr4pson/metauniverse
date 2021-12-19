@@ -6,8 +6,8 @@ import classNames from 'classnames';
 
 type Props = {
   normalText: string;
-  wrappedText: string;
   titleInfo: string | JSX.Element;
+  wrappedText?: string;
   pageTitleClassName?: string,
   normalTextBottom?: string;
   withControls?: boolean;
