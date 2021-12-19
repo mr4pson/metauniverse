@@ -1,7 +1,4 @@
-import { Header, PageTitle, SectionTitle } from 'modules';
-import { RightArrowIcon } from 'public/icons';
-import { memo } from 'react';
-import { Button } from 'ui-kit';
+import { SectionTitle } from 'modules';
 import styles from './build-in-section.module.scss';
 import classNames from 'classnames';
 
