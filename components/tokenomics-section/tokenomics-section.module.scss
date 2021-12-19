@@ -1,6 +1,9 @@
 .tokenomics-section {
   padding-bottom: 87px;
   border-bottom: solid 1.5px #02ffb9;
+  background-image: url(/assets/images/bg.png);
+  background-size: cover;
+  background-position: center;
 
   &__footer {
     display: flex;
