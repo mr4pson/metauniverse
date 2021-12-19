@@ -15,7 +15,6 @@ const FaqSection = (): JSX.Element => {
           {
             questions.map(question => (
               <Collapse 
-                buttonIcon="Collapse"
                 title={question.title}
                 children={question.description}
               />

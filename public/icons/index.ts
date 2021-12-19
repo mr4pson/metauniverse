@@ -6,3 +6,5 @@ export { LockIcon } from './lock-icon';
 export { WhaleIcon } from './whale-icon';
 export { PullIcon } from './pull-icon';
 export { PeopleIcon } from './people-icon';
+export { BottomArrowIcon } from './bottom-arrow-icon';
+export { ScrollTopIcon } from './scroll-top-icon';

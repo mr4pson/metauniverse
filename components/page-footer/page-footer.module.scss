@@ -1,0 +1,80 @@
+.page-footer {
+  display: flex;
+  justify-content: center;
+  background-image: url(/assets/images/bg.png);
+  background-size: cover;
+  background-position: center;
+
+  &__social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 34px 50px;
+    width: 182px;
+    border-right: 2px solid #02ffb9;
+  }
+
+  &__media-icons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 125px;
+  }
+
+  &__media-icon {
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__links-and-products {
+    padding: 34px 50px;
+    width: 674px;
+  }
+
+  &__title {
+    font-family: 'SFProText';
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: -0.86px;
+    margin-top: 0;
+    margin-bottom: 23px;
+  }
+
+  &__groups-wrapper {
+    display: flex;
+    gap: 110px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: 'SFProText';
+    line-height: 1.67;
+    letter-spacing: -0.51px;
+
+    &:hover {
+      color: #02ffb9;
+    }
+  }
+
+  &__copyright {
+    font-family: 'SFProText';
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 2.5;
+    margin-top: 70px;
+    letter-spacing: normal;
+  }
+}

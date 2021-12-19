@@ -13,7 +13,14 @@ const Header = (): JSX.Element => {
     <div className={styles["header-wrapper"]}>
       <div className={styles["header"]}>
         <div className={styles["header__logo-links-wrapper"]}>
-          <Image src="/assets/Logo.png" alt="me" width="67" height="53" />
+          <Image
+            className={styles['header__logo']}
+            onClick={() => router.push('/')}
+            src="/assets/Logo.png"
+            alt="Logo"
+            width="67"
+            height="53"
+          />
           <div className={styles['header__links']}>
             {
               headerLinks.map(linkGroup => (

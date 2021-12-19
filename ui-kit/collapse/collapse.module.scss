@@ -1,3 +1,10 @@
+.collapse-wrapper {
+  width: 770px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .collapse {
   cursor: pointer;
   width: 700px;
@@ -12,7 +19,6 @@
     rgba(2, 255, 185, 0.25)
   );
   overflow: hidden;
-  margin-bottom: 20px;
 
   &__body {
     display: flex;
@@ -22,6 +28,17 @@
     margin: 6px 30px 0 30px;
     padding-bottom: 5px;
     min-height: 49px;
+  }
+
+  &__title {
+    font-family: 'SFProText';
+    font-size: 27px;
+    line-height: 1.79;
+    letter-spacing: -1px;
+    color: #ffffff;
+    font-weight: bold;
+    width: 100%;
+    white-space: pre-wrap;
   }
 
   &__content {
@@ -35,34 +52,13 @@
     visibility: hidden;
   }
 
-  &__title {
-    font-family: 'SFProText';
-    font-size: 28px;
-    line-height: 1.79;
-    letter-spacing: -1px;
-    color: #ffffff;
-    font-weight: bold;
-    width: 100%;
-    white-space: pre-wrap;
-  }
-
-  &__action {
-    min-width: 115px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   &__action-btn {
     cursor: pointer;
     outline: none;
     background: none;
     border: none;
-    margin-left: 10px;
     padding: 0;
     transition: all 0.3s;
-    margin-left: 20px;
-    color: #8d9fbb;
 
     svg {
       path {
@@ -70,9 +66,17 @@
       }
       &:hover {
         path {
-          fill: #0085f8;
+          fill: #02ffb9;
         }
       }
+    }
+  }
+
+  &__arrow-icon {
+    transition: all 0.3s;
+
+    &_turned {
+      transform: rotate(180deg);
     }
   }
 
@@ -98,7 +102,6 @@
         #05ffdd 53%,
         rgba(0, 255, 184, 0) 100%
       );
-      
     }
   }
   &--collapsed {

@@ -17,6 +17,10 @@
   justify-content: space-between;
   align-items: center;
 
+  &__logo {
+    cursor: pointer;
+  }
+
   &__logo-links-wrapper {
     display: flex;
     justify-content: space-between;
@@ -36,10 +40,10 @@
 
     &:hover {
       & > span {
-        color: red;
+        color: rgba(2, 255, 213, 0.71);
       }
       & > div {
-        background: red;
+        background: rgba(2, 255, 213, 0.71);
       }
     }
   }

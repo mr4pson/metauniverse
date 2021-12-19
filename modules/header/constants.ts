@@ -28,7 +28,7 @@ export const headerLinks = [
   {
     id: 'join-community',
     title: 'JOIN COMMUNITY',
-    link: 'join-community',
+    link: 'https://t.me/dendymetaverse',
     isDividerExist: false,
   }
 ];
