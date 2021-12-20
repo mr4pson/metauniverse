@@ -11,6 +11,7 @@ import OurPartnersSection from 'components/our-partners-section';
 import FaqSection from 'components/faq-section';
 import { ScrollTopIcon } from 'public/icons';
 import PageFooter from 'components/page-footer';
+import AboutIdoSection from 'components/about-ido-section';
 
 const IndexPage = (): JSX.Element => {
   function goToTopOfPage(): void {
@@ -36,6 +37,7 @@ const IndexPage = (): JSX.Element => {
         <BuildInSection />
         <OurPartnersSection />
         <FaqSection />
+        <AboutIdoSection />
         <button
           className={styles["scroll-top-btn"]}
           onClick={goToTopOfPage}
