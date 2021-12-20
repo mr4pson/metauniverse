@@ -21,13 +21,19 @@ const IntroductionSection = (): JSX.Element => {
         </div>
         <div className={styles['introduction-section__computer']}></div>
         <div className={styles['introduction-section__footer']}>
-          <Button
-            icon={
-              <RightArrowIcon />
-            }
+          <a
+            className={styles['introduction-section__link']}
+            href='https://dendy-metaverse.gitbook.io/dendymetaverse'
+            target="_blank"
           >
-            White Paper
-          </Button>
+            <Button
+              icon={
+                <RightArrowIcon />
+              }
+            >
+              White Paper
+            </Button>
+          </a>
         </div>
       </div>
     </div>

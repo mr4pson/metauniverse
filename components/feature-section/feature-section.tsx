@@ -1,11 +1,17 @@
 import { SectionTitle } from 'modules';
+import { Modal } from 'modules/modal/modal';
+import { useModal } from 'modules/modal/use-modal';
 import { RightArrowIcon } from 'public/icons';
+import { useState } from 'react';
 import { Button } from 'ui-kit';
+import ModalWindow from 'ui-kit/modal-window';
 import { features } from './constants';
 import FeatureSectionItem from './feature-section-item';
 import styles from './feature-section.module.scss';
 
 const FeatureSection = (): JSX.Element => {
+  const { modalIsOpen, handleClose, handleOpen } = useModal();
+
   return (
     <div className={styles["feature-section"]}>
       <div className={"container"}>
@@ -31,11 +37,19 @@ const FeatureSection = (): JSX.Element => {
             icon={
               <RightArrowIcon />
             }
+            onClick={handleOpen}
           >
             Buy now
           </Button>
         </div>
       </div>
+      <Modal
+        title="Feature availability"
+        text="Will be available on"
+        date={<span>JANUARY 1 <br />2022</span>}
+        modalIsOpen={modalIsOpen}
+        handleClose={handleClose}
+      />
     </div>
   );
 };

@@ -1,13 +1,28 @@
-import Head from 'next/head';
 import Link from 'next/link';
-import { headerLinks } from './constants';
+import { getHeaderLinks } from './helpers';
 import styles from './header.module.scss';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
 import Image from 'next/image';
+import ModalWindow from 'ui-kit/modal-window';
+import { useEffect, useState } from 'react';
+import { useModal } from 'modules/modal/use-modal';
+import { Modal } from 'modules/modal/modal';
 
 const Header = (): JSX.Element => {
   const router = useRouter();
+  const [modalContent, setModalContent] = useState({
+    text: '',
+    date: '',
+  });
+
+  const { modalIsOpen, handleClose, handleOpen } = useModal();
+
+  useEffect(() => {
+    if (modalContent.text || modalContent.date) {
+      handleOpen();
+    }
+  }, [modalContent])
 
   return (
     <div className={styles["header"]}>
@@ -23,9 +38,9 @@ const Header = (): JSX.Element => {
           />
           <div className={styles['header__links']}>
             {
-              headerLinks.map(linkGroup => (
-                <div className={styles['header__link-group']}>
-                  <Link href={linkGroup.link}>
+              getHeaderLinks(setModalContent).map(linkGroup => (
+                <div onClick={linkGroup.onClick} className={styles['header__link-group']}>
+                  <Link href={linkGroup.link ?? ''}>
                     <span className={classNames(
                       styles['header__link'], 
                       { [styles['header__link_active']]: router.pathname === linkGroup.link }
@@ -48,6 +63,13 @@ const Header = (): JSX.Element => {
           </div>
         </div>
       </div>
+       <Modal
+        title="Page availability"
+        text={modalContent.text}
+        date={modalContent.date}
+        modalIsOpen={modalIsOpen}
+        handleClose={handleClose}
+      />
     </div>
   );
 };

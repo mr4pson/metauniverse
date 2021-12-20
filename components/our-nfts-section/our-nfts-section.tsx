@@ -7,15 +7,19 @@ import { nfts } from './constants';
 import OurNftsSectionItem from './our-nfts-section-item';
 import styles from './our-nfts-section.module.scss';
 import { TypeChosenNft } from './types';
-import { useRouter } from 'next/router';
+import { useModal } from 'modules/modal/use-modal';
+import { Modal } from 'modules/modal/modal';
 
 const OurNftsSection = (): JSX.Element => {
-  const router = useRouter();
+  //TODO: uncomment after 17 Jan 2022
+  // const router = useRouter();
   
   const [chosenNft, setChosenNft] = useState<TypeChosenNft>({
     index: nfts[0].index,
     link: nfts[0].link,
   });
+
+  const { modalIsOpen, handleClose, handleOpen } = useModal();
 
   const handleChooseNftIndex = (updatingValue: number): void => {
     if (chosenNft.index > 1 && updatingValue === DECREMENTAL_VALUE) {
@@ -35,9 +39,10 @@ const OurNftsSection = (): JSX.Element => {
     }
   }
 
-  const openInNewTab = (): void => {
-    router.push(chosenNft.link);
-  }
+  //TODO: uncomment after 17 Jan 2022
+  // const openInNewTab = (): void => {
+  //   router.push(chosenNft.link);
+  // }
 
   return (
     <div className={styles["our-nfts-section"]}>
@@ -66,12 +71,19 @@ const OurNftsSection = (): JSX.Element => {
             icon={
               <RightArrowIcon />
             }
-            onClick={() => openInNewTab()}
+            onClick={handleOpen}
           >
             Go to the marketplace
           </Button>
         </div>
       </div>
+      <Modal
+        title="NFTs availability"
+        text="Will be available on"
+        date={<span>JANUARY 17 <br />2022</span>}
+        modalIsOpen={modalIsOpen}
+        handleClose={handleClose}
+      />
     </div>
   );
 };

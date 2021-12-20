@@ -6,6 +6,28 @@ body {
   margin: 0;
 }
 
+.ReactModalPortal {
+  z-index: 1001;
+  position: relative;
+}
+
+.ReactModal__Overlay--after-open {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.ReactModal__Content {
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.ReactModal__Content--after-open {
+  opacity: 1;
+  width: 350px;
+  background-color: #000000 !important;
+  color: #02ffb9;
+  padding: 0 !important;
+}
+
 @font-face {
   font-family: "SFPro";
   font-weight: 900;
@@ -23,6 +45,12 @@ body {
   font-family: "SFProText";
   font-weight: 700;
   src: url("/assets/fonts/SF/SFUIText-Bold.ttf");
+}
+
+@font-face {
+  font-family: "SFProText";
+  font-weight: 400;
+  src: url("/assets/fonts/SF/SFUIText-Regular.ttf");
 }
 
 @font-face {

@@ -48,6 +48,10 @@
   &__footer {
     padding-bottom: 109px;
   }
+
+  &__link {
+    text-decoration: none;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 990px) {
