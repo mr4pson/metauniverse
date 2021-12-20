@@ -52,9 +52,7 @@
 }
 
 .container {
-  // width: 1280px;
   height: 95px;
-  // padding: 0 180px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -69,5 +67,13 @@
 
   &_active {
     background: #02ffb9;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .header {
+    &__links {
+      padding-left: 65px;
+    }
   }
 }

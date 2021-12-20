@@ -70,3 +70,12 @@
     color: #ffffff;
   }
 }
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .our-nfts-item {
+    &__image {
+      width: 144px;
+      height: 117px;
+    }
+  }
+}
