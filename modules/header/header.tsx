@@ -10,8 +10,8 @@ const Header = (): JSX.Element => {
   const router = useRouter();
 
   return (
-    <div className={styles["header-wrapper"]}>
-      <div className={styles["header"]}>
+    <div className={styles["header"]}>
+      <div className={classNames("container", styles["container"])}>
         <div className={styles["header__logo-links-wrapper"]}>
           <Image
             className={styles['header__logo']}

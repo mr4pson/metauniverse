@@ -1,17 +1,13 @@
 .introduction-section {
   width: 100%;
-  padding: 97px 0 0;
+  padding: 50px 0 0;
   border-bottom: solid 1.5px #02ffb9;
-  
-  &__wrapper {
-    max-width: 1200px;
-    margin: auto;
-    background-image: url(/icons/introduction-section-bg.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: bottom;
-  }
+  background-image: url(/assets/images/introduction-section-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  position: relative;
 
   &__page-title {
     &_bottom {
@@ -27,13 +23,25 @@
     }
   }
 
-  &__page-description {
-    margin: 35px 0 86px;
+  &__page-description { 
+    margin: 35px 0 126px;
     max-width: 382px;
     color: #02ffb9;
     font-size: 20px;
     font-family: 'VT323-Regular';
     line-height: 1.25;
+  }
+
+  &__computer {
+    background-image: url(/assets/images/computer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 570px;
+    height: 401px;
+    position: absolute;
+    left: 415px;
+    top: 150px;
+    z-index: 100;
   }
 
   &__footer {

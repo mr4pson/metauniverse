@@ -9,30 +9,44 @@ body {
 @font-face {
   font-family: "SFPro";
   font-weight: 900;
-  src: url("./assets/fonts/SF/SFProDisplay-Bold.ttf");
+  src: url("/assets/fonts/SF/SFProDisplay-Bold.ttf");
 }
 
 
 @font-face {
   font-family: "SFProText";
   font-weight: 900;
-  src: url("./assets/fonts/SF/SFUIText-Heavy.ttf");
+  src: url("/assets/fonts/SF/SFUIText-Heavy.ttf");
 }
 
 @font-face {
   font-family: "SFProText";
   font-weight: 700;
-  src: url("./assets/fonts/SF/SFUIText-Bold.ttf");
+  src: url("/assets/fonts/SF/SFUIText-Bold.ttf");
 }
 
 @font-face {
   font-family: "VT323-Regular";
   font-weight: 400;
-  src: url("./assets/fonts/VT323/VT323-Regular.ttf");
+  src: url("/assets/fonts/VT323/VT323-Regular.ttf");
 }
 
 .container {
   width: 100%;
-  max-width: 913px;
+  /* max-width: 913px; */
+  max-width: 990px;
+  padding: 0 25px;
   margin: auto;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+
 }
