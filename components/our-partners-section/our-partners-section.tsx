@@ -5,8 +5,12 @@ import { Button } from 'ui-kit';
 import styles from './our-partners-section.module.scss';
 import classNames from 'classnames';
 import { partnerLinks } from './constants';
+import { Modal } from 'modules/modal/modal';
+import { useModal } from 'modules/modal/use-modal';
 
 const OurPartnersSection = (): JSX.Element => {
+  const { modalIsOpen, handleClose, handleOpen } = useModal();
+
   return (
     <div className={styles["our-partners"]}>
       <div className="container">
@@ -30,11 +34,19 @@ const OurPartnersSection = (): JSX.Element => {
             icon={
               <RightArrowIcon />
             }
+            onClick={handleOpen}
           >
             View the chart
           </Button>
         </div>
       </div>
+      <Modal
+        title="Partners availability"
+        text="Will be available on"
+        date={<span>JANUARY 20 <br />2022</span>}
+        modalIsOpen={modalIsOpen}
+        handleClose={handleClose}
+      />
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { getHeaderLinks } from './helpers';
 import styles from './header.module.scss';
@@ -7,17 +6,17 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import ModalWindow from 'ui-kit/modal-window';
 import { useEffect, useState } from 'react';
+import { useModal } from 'modules/modal/use-modal';
+import { Modal } from 'modules/modal/modal';
 
 const Header = (): JSX.Element => {
   const router = useRouter();
-  const [modalIsOpen, setIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState({
     text: '',
     date: '',
   });
 
-  const handleClose = () => setIsOpen(false);
-  const handleOpen = () => setIsOpen(true);
+  const { modalIsOpen, handleClose, handleOpen } = useModal();
 
   useEffect(() => {
     if (modalContent.text || modalContent.date) {
@@ -26,8 +25,8 @@ const Header = (): JSX.Element => {
   }, [modalContent])
 
   return (
-    <div className={styles["header-wrapper"]}>
-      <div className={styles["header"]}>
+    <div className={styles["header"]}>
+      <div className={classNames("container", styles["container"])}>
         <div className={styles["header__logo-links-wrapper"]}>
           <Image
             className={styles['header__logo']}
@@ -64,20 +63,13 @@ const Header = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <ModalWindow
-        title='IDO availability'
-        isModalOpen={modalIsOpen}
+       <Modal
+        title="Page availability"
+        text={modalContent.text}
+        date={modalContent.date}
+        modalIsOpen={modalIsOpen}
         handleClose={handleClose}
-      >
-        <div className={styles['modal__content']}>
-          <span className={styles['modal__text']}>
-            {modalContent.text}
-          </span>
-          <span className={styles['modal__date']}>
-            {modalContent.date}
-          </span>
-        </div>
-      </ModalWindow>
+      />
     </div>
   );
 };

@@ -8,6 +8,7 @@
   font-family: "VT323-Regular";
   font-size: 31px;
   color: #02ffb9;
+  text-shadow: 0 0 2px rgba(2, 255, 185, 0.83);
   box-shadow: 0 0 15px 0 rgba(2, 255, 185, 0.5);
   border-image-source: linear-gradient(to bottom, #a1ffe5 0%, #02ffb9);
   border-image-slice: 1;
@@ -20,6 +21,7 @@
 
   &:hover {
     color: rgba($color: #02ffb9, $alpha: 0.5);
+    text-shadow: none;
 
     svg g path {
       stroke: rgba($color: #02ffb9, $alpha: 0.1);

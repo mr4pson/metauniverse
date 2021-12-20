@@ -5,13 +5,11 @@ import { Button } from 'ui-kit';
 import { RightArrowIcon } from 'public/icons';
 import { steps } from './constants';
 import { useState } from 'react';
-import ModalWindow from 'ui-kit/modal-window';
+import { Modal } from 'modules/modal/modal';
+import { useModal } from 'modules/modal/use-modal';
 
 const AboutIdoSection = (): JSX.Element => {
-  const [modalIsOpen, setIsOpen] = useState(false);
-
-  const handleClose = () => setIsOpen(false);
-  const handleOpen = () => setIsOpen(true);
+  const { modalIsOpen, handleClose, handleOpen } = useModal();
 
   return (
     <div className={styles["about-ido"]}>
@@ -53,20 +51,13 @@ const AboutIdoSection = (): JSX.Element => {
           </Button>
         </div>
       </div>
-      <ModalWindow
-        title='IDO availability'
-        isModalOpen={modalIsOpen}
+      <Modal
+        title="IDO availability"
+        text="Will be available on"
+        date={<span>JANUARY 1 <br />2022</span>}
+        modalIsOpen={modalIsOpen}
         handleClose={handleClose}
-      >
-        <div className={styles['modal__content']}>
-          <span className={styles['modal__text']}>
-            Will be available on
-          </span>
-          <span className={styles['modal__date']}>
-            JANUARY 1 <br />2022
-          </span>
-        </div>
-      </ModalWindow>
+      />
     </div>
   );
 };

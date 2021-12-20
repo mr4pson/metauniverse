@@ -18,10 +18,12 @@
   $self: &;
   display: flex;
   align-items: center;
+
   &__left {
     margin-right: 140px;
     margin-left: 33px;
   }
+
   &__right {
     display: flex;
     align-items: top;
@@ -33,12 +35,20 @@
 
 .burnt-info {
   width: 125px;
+
   &__title {
     margin-top: 21px;
     color: #02ffb9;
     font-family: "SFProText";
     font-weight: 900;
+  }
+
+  &__label {
     font-size: 20px;
+  }
+  
+  &__value {
+    font-size: 36px;
   }
 }
 
@@ -56,11 +66,31 @@
   display: flex;
   align-items: center;
   padding-right: 47px;
+
   &__label {
     font-size: 40px;
     line-height: 50px;
     font-family: "SFProText";
     font-weight: 900;
     margin-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .game-features {
+    display: block;
+    margin-top: 30px;
+
+    &__left {
+      margin: 0;
+    }
+
+    &__right {
+      margin-top: 30px;
+    }
+  }
+
+  .burnt-info {
+    margin: auto;
   }
 }

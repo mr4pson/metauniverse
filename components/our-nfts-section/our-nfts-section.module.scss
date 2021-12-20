@@ -58,7 +58,9 @@
     margin: 15px 0 10px;
     font-size: 15px;
     color: #02ffb9;
+    text-shadow: 0 0 2px rgba(2, 255, 185, 0.83);
     font-family: 'VT323-Regular';
+    letter-spacing: -0.5px;
   }
 
   &__title {
@@ -66,5 +68,14 @@
     font-family: 'SFProText';
     font-size: 20px;
     color: #ffffff;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .our-nfts-item {
+    &__image {
+      width: 144px;
+      height: 117px;
+    }
   }
 }

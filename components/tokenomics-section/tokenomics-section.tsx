@@ -1,5 +1,7 @@
 import { getImageUrl } from 'helpers';
 import { SectionTitle } from 'modules';
+import { Modal } from 'modules/modal/modal';
+import { useModal } from 'modules/modal/use-modal';
 import Image from 'next/image';
 import { RightArrowIcon } from 'public/icons';
 import { memo } from 'react';
@@ -8,6 +10,8 @@ import { gameFeatures } from './constants';
 import styles from './tokenomics-section.module.scss';
 
 const TokenomicsSection = (): JSX.Element => {
+  const { modalIsOpen, handleClose, handleOpen } = useModal();
+
   return (
     <div className={styles["tokenomics-section"]}>
       <div className={"container"}>
@@ -29,7 +33,10 @@ const TokenomicsSection = (): JSX.Element => {
                   width="125px"
                   height="148px"
                 />
-                <div className={styles["burnt-info__title"]}>Burnt <br /> 0</div>
+                <div className={styles["burnt-info__title"]}>
+                  <div className={styles["burnt-info__label"]}>Burnt</div>
+                  <div className={styles["burnt-info__value"]}>0</div>
+                </div>
               </div>
             </div>
             <div className={styles["game-features__right"]}>
@@ -55,6 +62,7 @@ const TokenomicsSection = (): JSX.Element => {
             icon={
               <RightArrowIcon />
             }
+            onClick={handleOpen}
           >
             Connect wallet
           </Button>
@@ -72,6 +80,13 @@ const TokenomicsSection = (): JSX.Element => {
           </div>
         </div>
       </div>
+      <Modal
+        title="Tokenomics availability"
+        text="Will be available on"
+        date={<span>JANUARY 17 <br />2022</span>}
+        modalIsOpen={modalIsOpen}
+        handleClose={handleClose}
+      />
     </div>
   );
 };

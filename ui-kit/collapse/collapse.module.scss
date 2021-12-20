@@ -46,8 +46,9 @@
     font-size: 22px;
     max-height: 0;
     margin: 0 30px;
-    font-size: 16px;
+    font-size: 22px;
     color: #02ffb9;
+    text-shadow: 0 0 2px rgba(2, 255, 185, 0.5);
     transition: all 0.3s;
     visibility: hidden;
   }
@@ -87,11 +88,7 @@
     &--left {
       width: 215px;
       height: 1.5px;
-      background: linear-gradient(
-        to right,
-        rgba(0, 255, 184, 0),
-        #05ffdd 46%
-      );
+      background: linear-gradient(to right, rgba(0, 255, 184, 0), #05ffdd 46%);
     }
 
     &--right {
@@ -113,5 +110,11 @@
       margin: 20px 30px;
       visibility: visible;
     }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .collapse-wrapper {
+    width: 735px;
   }
 }

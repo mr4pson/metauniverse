@@ -60,25 +60,34 @@
   }
 }
 
-.modal {
-  &__content {
-    text-align: center;
-  }
+// .modal {
+//   &__content {
+//     text-align: center;
+//   }
 
-  &__text {
-    display: block;
-    font-family: 'SFProText';
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.13;
-  }
+//   &__text {
+//     display: block;
+//     font-family: 'SFProText';
+//     font-size: 16px;
+//     font-weight: 500;
+//     line-height: 1.13;
+//   }
 
-  &__date {
-    font-family: 'SFProText';
-    font-size: 22px;
-    line-height: 1.36;
-    display: block;
-    margin: 20px 0 10px;
-    font-weight: 900;
+//   &__date {
+//     font-family: 'SFProText';
+//     font-size: 22px;
+//     line-height: 1.36;
+//     display: block;
+//     margin: 20px 0 10px;
+//     font-weight: 900;
+//   }
+// }
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .about-ido {
+    &__steps {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
   }
 }
