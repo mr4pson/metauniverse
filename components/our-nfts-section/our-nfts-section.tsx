@@ -9,6 +9,7 @@ import styles from './our-nfts-section.module.scss';
 import { TypeChosenNft } from './types';
 import { useModal } from 'modules/modal/use-modal';
 import { Modal } from 'modules/modal/modal';
+import { Fade } from 'react-awesome-reveal';
 
 const OurNftsSection = (): JSX.Element => {
   //TODO: uncomment after 17 Jan 2022
@@ -54,28 +55,30 @@ const OurNftsSection = (): JSX.Element => {
           withControls
           handleChooseNftIndex={handleChooseNftIndex}
         />
-        <div className={styles["our-nfts-section__body"]}>
-          {
-            nfts.map(nft => (
-              <OurNftsSectionItem
-                key={nft.index}
-                {...nft}
-                chosenNftIndex={chosenNft.index}
-                setChosenNft={setChosenNft}
-              />
-            ))
-          }
-        </div>
-        <div className={styles['our-nfts-section__footer']}>
-          <Button
-            icon={
-              <RightArrowIcon />
-            }
-            onClick={handleOpen}
-          >
-            Go to the marketplace
-          </Button>
-        </div>
+        <Fade duration={3500}>
+          <div className={styles["our-nfts-section__body"]}>
+            <Fade cascade triggerOnce direction={'right'} duration={750}>
+              {nfts.map(nft => (
+                <OurNftsSectionItem
+                  key={nft.index}
+                  {...nft}
+                  chosenNftIndex={chosenNft.index}
+                  setChosenNft={setChosenNft}
+                />
+              ))}
+            </Fade>
+          </div>
+          <div className={styles['our-nfts-section__footer']}>
+            <Button
+              icon={
+                <RightArrowIcon />
+              }
+              onClick={handleOpen}
+            >
+              Go to the marketplace
+            </Button>
+          </div>
+        </Fade>
       </div>
       <Modal
         title="NFTs availability"
