@@ -29,7 +29,10 @@ const TokenomicsSection = (): JSX.Element => {
                   width="125px"
                   height="148px"
                 />
-                <div className={styles["burnt-info__title"]}>Burnt <br /> 0</div>
+                <div className={styles["burnt-info__title"]}>
+                  <div className={styles["burnt-info__label"]}>Burnt</div>
+                  <div className={styles["burnt-info__value"]}>0</div>
+                </div>
               </div>
             </div>
             <div className={styles["game-features__right"]}>

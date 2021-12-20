@@ -1,6 +1,7 @@
 .feature-section-item {
   width: 170px;
   margin-top: 45px;
+  margin-right: 38px;
 
   &__icon {
     height: 60px;
@@ -13,6 +14,7 @@
     font-family: 'SFPro';
     font-weight: 900;
     color: #02ffb9;
+    text-shadow: 0 0 2px rgba(2, 255, 185, 0.83);
     height: 45px;
   }
 
