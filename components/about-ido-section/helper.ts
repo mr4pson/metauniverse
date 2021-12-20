@@ -1,8 +1,10 @@
-export const steps = [
+export const getSteps = (screenWidth: number | null) => [
   {
     id: '01',
     number: '01',
-    text: 'You need to install Metamask add-on on your Internet browser',
+    text: screenWidth && screenWidth > 990
+      ? 'You need to install Metamask add-on on your Internet browser'
+      : 'You need to install Metamask app from your app store',
   },
   {
     id: '02',
