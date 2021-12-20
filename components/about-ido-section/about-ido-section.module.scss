@@ -26,10 +26,63 @@
     margin-bottom: 55px;
   }
 
-  &__footer {
+  &__join-btn {
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  &__question {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__big-arrow {
+    width: 50px;
+    height: 50px;
+    margin-right: 23px;
+    background-image: url(/assets/BigArrow.png);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 8px;
+  }
+
+  &__question-text {
+    font-family: 'SFProText';
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: -1.71px;
+    width: 365px;
+  }
+
+  &__adventages {
+    width: 414px;
+    height: 154px;
+    box-shadow: 0 0 15px 0 rgba(2, 255, 185, 0.5);
+    border-style: solid;
+    border-width: 2px;
+    border-image-source: linear-gradient(to bottom, #b1ffe9 0%, #02ffb9);
+    border-image-slice: 1;
+    background-image: linear-gradient(to bottom, rgba(5, 255, 221, 0.09) 10%, rgba(2, 255, 185, 0.25));
+  }
+
+  &__list {
+    color: #02ffb9;
+    font-family: 'VT323-Regular';
+    font-size: 22px;
+
+    & > li {
+      list-style-type: "- ";
+    }
   }
 }
 
@@ -60,28 +113,99 @@
   }
 }
 
-// .modal {
-//   &__content {
-//     text-align: center;
-//   }
+.notification-message {
+  position: fixed;
+  z-index: 1002;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  height: 122px;
+  border-top: solid 1.5px #02ffb9;
+  border-bottom: solid 1.5px #02ffb9;
+  background-color: #0c0c0c;
+  display: flex;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
 
-//   &__text {
-//     display: block;
-//     font-family: 'SFProText';
-//     font-size: 16px;
-//     font-weight: 500;
-//     line-height: 1.13;
-//   }
+  &_shown {
+    visibility: visible;
+    opacity: 1;
+  }
 
-//   &__date {
-//     font-family: 'SFProText';
-//     font-size: 22px;
-//     line-height: 1.36;
-//     display: block;
-//     margin: 20px 0 10px;
-//     font-weight: 900;
-//   }
-// }
+  &__data {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 70px;
+    line-height: 1.13;
+    width: 31%;
+    height: 100%;
+    border-right: 1.5px solid #02ffb9;
+  }
+
+  &__data-text {
+    display: block;
+    width: 145px;
+    color: #02ffb9;
+    font-family: 'SFProText';
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1.13;
+  }
+
+  &__body {
+    width: 69%;
+    position: relative;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 29px;
+    height: 100%;
+  }
+
+  &__body-info {
+    font-family: 'SFProText';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.13;
+    color: #02ffb9;
+    margin-right: 60px;
+  }
+
+  &__submit-btn {
+    background-color: #02ffb9;
+    color: #000000;
+    font-family: 'SFProText';
+    font-size: 16px;
+    font-weight: 900;
+    width: 122px;
+    height: 46px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 96px;
+
+    &:hover {
+      color: rgba($color: #000000, $alpha: 0.8);
+      background-color: rgba(2, 255, 185, 0.71);
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    right: 40px;
+    top: -40px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: fit-content;
+  }
+}
 
 @media only screen and (min-width: 769px) and (max-width: 990px) {
   .about-ido {
