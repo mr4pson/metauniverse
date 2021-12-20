@@ -55,6 +55,10 @@ const SectionTitle = ({
         {
           normalTextBottom && <div className={styles["page-title_bottom"]}>{normalTextBottom}</div>
         }
+        <div className={styles["page-title__border"]}>
+          <div className={styles["page-title__border--left"]}></div>
+          <div className={styles["page-title__border--right"]}></div>
+        </div>
       </div>
     </div>
   );

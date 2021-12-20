@@ -85,3 +85,32 @@
     font-size: 64px;
   }
 }
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .section-title {
+    &__info {
+      display: none;
+    }
+  }
+  .page-title {
+    border: none;
+    &__container {
+      padding-left: 0;
+      justify-content: center;
+    }
+    &__border {
+      margin-top: 40px;
+      display: flex;
+      &--left, &--right {
+        width: 50%;
+        height: 1.5px;
+      }
+      &--left {
+        background: linear-gradient(to left, #05ffdd 53%, rgba(0, 255, 184, 0) 100%);
+      }
+      &--right {
+        background: linear-gradient(to right, #05ffdd 53%, rgba(0, 255, 184, 0) 100%);
+      }
+    }
+  }
+}
