@@ -1,6 +1,6 @@
 import { getImageUrl } from 'helpers';
 import { SectionTitle } from 'modules';
-import { Modal } from 'modules/modal/modal';
+import Modal from 'modules/modal/modal';
 import { useModal } from 'modules/modal/use-modal';
 import Image from 'next/image';
 import { RightArrowIcon } from 'public/icons';

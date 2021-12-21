@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { Button } from 'ui-kit';
 import { RightArrowIcon } from 'public/icons';
 import { useEffect, useState } from 'react';
-import { Modal } from 'modules/modal/modal';
+import Modal from 'modules/modal/modal';
 import { useModal } from 'modules/modal/use-modal';
 import { getSteps } from './helper';
 import { useWindowSize } from 'hooks';
