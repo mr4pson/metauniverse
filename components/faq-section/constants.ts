@@ -1,7 +1,7 @@
 export  const questions = [
   {
     id: '1',
-    title: '-How to start?',
+    title: 'How to start?',
     description: "To get the best experience from the Dandy Metaverse, join our community on social networks and start playing games.We have created a user-friendly interface for you so that you can't get confused on the website.",
   },
   {
