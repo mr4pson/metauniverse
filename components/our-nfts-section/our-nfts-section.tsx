@@ -8,7 +8,7 @@ import OurNftsSectionItem from './our-nfts-section-item';
 import styles from './our-nfts-section.module.scss';
 import { TypeChosenNft } from './types';
 import { useModal } from 'modules/modal/use-modal';
-import { Modal } from 'modules/modal/modal';
+import Modal from 'modules/modal/modal';
 import { Fade } from 'react-awesome-reveal';
 import { useWindowSize } from 'hooks';
 

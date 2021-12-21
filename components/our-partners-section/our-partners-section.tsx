@@ -1,13 +1,11 @@
-import { Header, PageTitle, SectionTitle } from 'modules';
-import { RightArrowIcon } from 'public/icons';
-import { memo } from 'react';
-import { Button } from 'ui-kit';
-import styles from './our-partners-section.module.scss';
-import classNames from 'classnames';
-import { partnerLinks } from './constants';
-import { Modal } from 'modules/modal/modal';
+import { SectionTitle } from 'modules';
+import Modal from 'modules/modal/modal';
 import { useModal } from 'modules/modal/use-modal';
+import { RightArrowIcon } from 'public/icons';
 import { Fade, Zoom } from "react-awesome-reveal";
+import { Button } from 'ui-kit';
+import { partnerLinks } from './constants';
+import styles from './our-partners-section.module.scss';
 
 const OurPartnersSection = (): JSX.Element => {
   const { modalIsOpen, handleClose, handleOpen } = useModal();

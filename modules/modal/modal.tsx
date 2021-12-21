@@ -10,7 +10,7 @@ type Props = {
   handleClose: () => void;
 }
 
-export const Modal = ({
+const Modal = ({
   title,
   text,
   date,
@@ -35,3 +35,5 @@ export const Modal = ({
     </ModalWindow>
   )
 }
+
+export default Modal;

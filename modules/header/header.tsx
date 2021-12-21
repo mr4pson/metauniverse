@@ -1,14 +1,12 @@
-import Link from 'next/link';
-import { getHeaderLinks } from './helpers';
-import styles from './header.module.scss';
-import { useRouter } from 'next/router';
 import classNames from 'classnames';
-import Image from 'next/image';
-import ModalWindow from 'ui-kit/modal-window';
-import { useEffect, useState } from 'react';
+import Modal from 'modules/modal/modal';
 import { useModal } from 'modules/modal/use-modal';
-import { Modal } from 'modules/modal/modal';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { MenuIcon } from 'public/icons/menu-icon';
+import { useEffect, useState } from 'react';
+import styles from './header.module.scss';
+import { getHeaderLinks } from './helpers';
 
 const Header = (): JSX.Element => {
   const router = useRouter();
