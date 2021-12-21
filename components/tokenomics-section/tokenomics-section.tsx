@@ -48,13 +48,10 @@ const TokenomicsSection = (): JSX.Element => {
                   {gameFeatures.map((gameFeature, index) => (
                     <div key={`game-feature-${index}`} className={styles["game-feature"]}>
                       <div className={styles["game-feature__icon"]}>
-                        <Image
+                        <div
+                          style={{ backgroundImage: `url(${getImageUrl(gameFeature.icon)})` }}
                           className={styles["game-feature__icon"]}
-                          src={getImageUrl(gameFeature.icon)}
-                          alt="me"
-                          width="67"
-                          height="80"
-                        />
+                        ></div>
                       </div>
                       <div className={styles["game-feature__title"]}>{gameFeature.title}</div>
                     </div>

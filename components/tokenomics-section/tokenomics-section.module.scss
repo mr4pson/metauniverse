@@ -60,6 +60,13 @@
     line-height: 20px;
     color: #fff;
   }
+
+  &__icon {
+    width: 67px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .total-taxes {
