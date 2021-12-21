@@ -24,7 +24,7 @@ const SectionTitle = ({
   handleChooseNftIndex,
 }: Props): JSX.Element => {
   return (
-    <div className={styles["section-title"]}>
+    <div className={classNames(styles["section-title"], "section-title")}>
       <div className={styles["section-title__info"]}>
         <div className={styles["section-title__info-text"]}>
           {titleInfo}
@@ -53,7 +53,7 @@ const SectionTitle = ({
           wrappedText={wrappedText}
         />
         {
-          normalTextBottom && <div className={styles["page-title_bottom"]}>{normalTextBottom}</div>
+          normalTextBottom && <div className={classNames(styles["page-title_bottom"], "page-title_bottom")}>{normalTextBottom}</div>
         }
         <div className={styles["page-title__border"]}>
           <div className={styles["page-title__border--left"]}></div>

@@ -21,5 +21,19 @@
   &__text {
     font-family: 'VT323-Regular';
     color: #ffffff;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .feature-section-item {
+    width: 142px;
+    margin-right: 13px;
+    margin-top: 20px;
+
+    &__title {
+      height: 70px;
+      font-size: 20px;
+    }
   }
 }

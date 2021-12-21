@@ -49,7 +49,7 @@ const TokenomicsSection = (): JSX.Element => {
                     <div key={`game-feature-${index}`} className={styles["game-feature"]}>
                       <div className={styles["game-feature__icon"]}>
                         <Image
-                          className={styles["burnt-info__icon"]}
+                          className={styles["game-feature__icon"]}
                           src={getImageUrl(gameFeature.icon)}
                           alt="me"
                           width="67"

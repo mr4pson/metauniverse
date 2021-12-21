@@ -94,20 +94,66 @@
   }
   .page-title {
     border: none;
+
     &__container {
       padding-left: 0;
       justify-content: center;
     }
+
     &__border {
       margin-top: 40px;
       display: flex;
+
       &--left, &--right {
         width: 50%;
         height: 1.5px;
       }
+
       &--left {
         background: linear-gradient(to left, #05ffdd 53%, rgba(0, 255, 184, 0) 100%);
       }
+
+      &--right {
+        background: linear-gradient(to right, #05ffdd 53%, rgba(0, 255, 184, 0) 100%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-title {
+
+    &__info {
+      display: none ;
+    }
+  }
+
+  .page-title {
+    border: none;
+    padding: 15px 0;
+
+    &__container {
+      padding-left: 0;
+      justify-content: center;
+    }
+
+    &_bottom {
+      font-size: 40px;
+    }
+
+    &__border {
+      margin-top: 20px;
+      display: flex;
+
+      &--left, &--right {
+        width: 50%;
+        height: 1.5px;
+      }
+
+      &--left {
+        background: linear-gradient(to left, #05ffdd 53%, rgba(0, 255, 184, 0) 100%);
+      }
+
       &--right {
         background: linear-gradient(to right, #05ffdd 53%, rgba(0, 255, 184, 0) 100%);
       }

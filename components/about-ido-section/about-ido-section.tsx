@@ -108,11 +108,11 @@ const AboutIdoSection = (): JSX.Element => {
                   Why do I need <br /> to take part in IDO?
                 </span>
               </div>
-              <div className={styles['about-ido__adventages']}>
+              <div className={styles['about-ido__advantages']}>
                 <ul className={styles['about-ido__list']}>
-                  <li>You can become one of the first investors</li>
-                  <li>You can get our $MetaDND tokens at a discount</li>
-                  <li>You can get more benefits from the Dendy Metaverse</li>
+                  <li>- You can become one of the first investors</li>
+                  <li>- You can get our $MetaDND tokens at a discount</li>
+                  <li>- You can get more benefits from the Dendy Metaverse</li>
                 </ul>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import { links, mediaIcons, products } from './constants';
 import styles from './page-footer.module.scss';
 import { Fade } from 'react-awesome-reveal';
+import classNames from 'classnames';
 
 const PageFooter = (): JSX.Element => {
   return (
@@ -31,7 +32,7 @@ const PageFooter = (): JSX.Element => {
           <Fade duration={1250} triggerOnce direction="up">
             <div className={styles["page-footer__groups-wrapper"]}>
               <div className={styles["page-footer__group"]}>
-                <h3 className={styles["page-footer__title"]}>Useful links:</h3>
+                <h3 className={classNames(styles["page-footer__title"], styles["page-footer__title_bottom"])}>Useful links:</h3>
                 <div className={styles["page-footer__links"]}>
                   {links.map(link => (
                     <a
@@ -45,7 +46,7 @@ const PageFooter = (): JSX.Element => {
                 </div>
               </div>
               <div className={styles["page-footer__group"]}>
-                <h3 className={styles["page-footer__title"]}>Products:</h3>
+                <h3 className={classNames(styles["page-footer__title"], styles["page-footer__title_bottom"])}>Products:</h3>
                 <div className={styles["page-footer__links"]}>
                   {products.map(product => (
                     <a
