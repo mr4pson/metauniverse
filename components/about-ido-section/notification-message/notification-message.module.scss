@@ -28,16 +28,16 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 70px;
+    padding-right: 42px;
     line-height: 1.13;
-    width: 31%;
+    width: 33%;
     height: 100%;
     border-right: 1.5px solid #02ffb9;
   }
 
   &__data-text {
     display: block;
-    width: 145px;
+    width: 165px;
     color: #02ffb9;
     font-family: 'SFProText';
     font-size: 16px;
@@ -46,7 +46,7 @@
   }
 
   &__body {
-    width: 69%;
+    width: 67%;
   }
 
   &__form {
