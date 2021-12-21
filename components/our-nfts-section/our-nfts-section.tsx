@@ -2,7 +2,7 @@ import { DECREMENTAL_VALUE, INCREMENTAL_VALUE } from 'common/constants';
 import { SectionTitle } from 'modules';
 import { RightArrowIcon } from 'public/icons';
 import { useState } from 'react';
-import { Button } from 'ui-kit';
+import { Button, CarouselWithDots } from 'ui-kit';
 import { nfts } from './constants';
 import OurNftsSectionItem from './our-nfts-section-item';
 import styles from './our-nfts-section.module.scss';
@@ -10,11 +10,14 @@ import { TypeChosenNft } from './types';
 import { useModal } from 'modules/modal/use-modal';
 import { Modal } from 'modules/modal/modal';
 import { Fade } from 'react-awesome-reveal';
+import { useWindowSize } from 'hooks';
 
 const OurNftsSection = (): JSX.Element => {
   //TODO: uncomment after 17 Jan 2022
   // const router = useRouter();
   
+  const size = useWindowSize();
+
   const [chosenNft, setChosenNft] = useState<TypeChosenNft>({
     index: nfts[0].index,
     link: nfts[0].link,
@@ -57,16 +60,29 @@ const OurNftsSection = (): JSX.Element => {
         />
         <Fade duration={3500}>
           <div className={styles["our-nfts-section__body"]}>
-            <Fade cascade triggerOnce direction={'right'} duration={750}>
-              {nfts.map(nft => (
-                <OurNftsSectionItem
-                  key={nft.index}
-                  {...nft}
-                  chosenNftIndex={chosenNft.index}
-                  setChosenNft={setChosenNft}
-                />
-              ))}
-            </Fade>
+            {
+              size.width && size.width < 991 ? (
+                <CarouselWithDots className={styles['our-nfts-section__carousel']} items={nfts.map(nft => (
+                  <OurNftsSectionItem
+                    key={nft.index}
+                    {...nft}
+                    chosenNftIndex={chosenNft.index}
+                    setChosenNft={setChosenNft}
+                  />
+                ))} />
+              ) : (
+                nfts.map(nft => (
+                  <Fade cascade triggerOnce direction={'right'} duration={750}>
+                    <OurNftsSectionItem
+                      key={nft.index}
+                      {...nft}
+                      chosenNftIndex={chosenNft.index}
+                      setChosenNft={setChosenNft}
+                    />
+                  </Fade>
+                ))
+              )
+            }
           </div>
           <div className={styles['our-nfts-section__footer']}>
             <Button
