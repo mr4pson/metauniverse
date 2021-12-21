@@ -11,6 +11,7 @@ import { useModal } from 'modules/modal/use-modal';
 import Modal from 'modules/modal/modal';
 import { Fade } from 'react-awesome-reveal';
 import { useWindowSize } from 'hooks';
+import ScrollContainer from 'react-indiana-drag-scroll'
 
 const OurNftsSection = (): JSX.Element => {
   //TODO: uncomment after 17 Jan 2022
@@ -59,31 +60,33 @@ const OurNftsSection = (): JSX.Element => {
           handleChooseNftIndex={handleChooseNftIndex}
         />
         <Fade duration={3500}>
-          <div className={styles["our-nfts-section__body"]}>
-            {
-              size.width && size.width < 991 ? (
-                <CarouselWithDots className={styles['our-nfts-section__carousel']} items={nfts.map(nft => (
-                  <OurNftsSectionItem
-                    key={nft.index}
-                    {...nft}
-                    chosenNftIndex={chosenNft.index}
-                    setChosenNft={setChosenNft}
-                  />
-                ))} />
-              ) : (
-                nfts.map(nft => (
-                  <Fade cascade triggerOnce direction={'right'} duration={750}>
+          <ScrollContainer className="scroll-container">
+            <div className={styles["our-nfts-section__body"]}>
+              {
+                size.width && size.width < 991 ? (
+                  <CarouselWithDots className={styles['our-nfts-section__carousel']} items={nfts.map(nft => (
                     <OurNftsSectionItem
                       key={nft.index}
                       {...nft}
                       chosenNftIndex={chosenNft.index}
                       setChosenNft={setChosenNft}
                     />
+                  ))} />
+                ) : (
+                  <Fade triggerOnce direction={'right'} duration={750}>
+                    {nfts.map(nft => (
+                      <OurNftsSectionItem
+                        key={nft.index}
+                        {...nft}
+                        chosenNftIndex={chosenNft.index}
+                        setChosenNft={setChosenNft}
+                      />
+                    ))}
                   </Fade>
-                ))
-              )
-            }
-          </div>
+                )
+              }
+            </div>
+          </ScrollContainer>
           <div className={styles['our-nfts-section__footer']}>
             <Button
               icon={
@@ -108,3 +111,9 @@ const OurNftsSection = (): JSX.Element => {
 };
 
 export default OurNftsSection;
+
+export async function getServerSideProps(context): Promise<{ props: {} }> {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}

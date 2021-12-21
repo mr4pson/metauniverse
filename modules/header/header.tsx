@@ -35,7 +35,7 @@ const Header = (): JSX.Element => {
             {
               getHeaderLinks(setModalContent).map(linkGroup => (
                 <div onClick={linkGroup.onClick} className={styles['header__link-group']}>
-                  <Link href={linkGroup.link ?? ''}>
+                  {/* <Link href={linkGroup.link ?? ''}> TODO: after january 2020 */}
                     <span className={classNames(
                       styles['header__link'], 
                       { [styles['header__link_active']]: router.pathname === linkGroup.link }
@@ -43,7 +43,7 @@ const Header = (): JSX.Element => {
                     >
                       {linkGroup.title}
                     </span>
-                  </Link>
+                  {/* </Link> */}
                   {
                     linkGroup.isDividerExist && (<div className={
                     classNames(

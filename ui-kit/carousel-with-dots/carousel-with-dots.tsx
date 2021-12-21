@@ -11,7 +11,8 @@ const CarouselWithDots = (props: Props) => {
   const [value, setValue] = useState(0);
 
   const onChange = value => {
-  setValue(value);
+    setValue(value);
+    console.log(value);
   }
 
   return (
