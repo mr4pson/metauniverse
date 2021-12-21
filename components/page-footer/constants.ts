@@ -58,7 +58,7 @@ export const mediaIcons = [
   {
     id: 'github',
     img: 'assets/page-footer-images/Github.png',
-    link: '',
+    link: 'https://www.reddit.com/user/dendymetaverse',
   },
   {
     id: 'youTube',

@@ -72,7 +72,7 @@ const TokenomicsSection = (): JSX.Element => {
                   }
                   onClick={handleOpen}
                 >
-                  Connect wallet
+                  View the contract
                 </Button>
               </Fade>
             </Fade>
@@ -87,7 +87,7 @@ const TokenomicsSection = (): JSX.Element => {
                     height="53"
                   />
                   <div className={styles["total-taxes__label"]}>
-                    Total tax: 10% <br /> Certik audited
+                    Total tax: 10%
                   </div>
                 </div>
               </Fade>
@@ -98,7 +98,7 @@ const TokenomicsSection = (): JSX.Element => {
       <Modal
         title="Tokenomics availability"
         text="Will be available on"
-        date={<span>JANUARY 17 <br />2022</span>}
+        date={<span>JANUARY 1 <br />2022</span>}
         modalIsOpen={modalIsOpen}
         handleClose={handleClose}
       />
