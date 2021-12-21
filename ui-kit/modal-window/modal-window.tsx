@@ -1,3 +1,4 @@
+import { CloseIcon } from 'public/icons/close-icon';
 import { ReactNode } from 'react';
 import Modal from 'react-modal';
 import styles from './modal-window.module.scss';
@@ -40,7 +41,9 @@ const ModalWindow = ({
     >
       <div className={styles['modal__header']}>
         <h2 className={styles['modal__title']}>{title}</h2>
-        <button className={styles['modal__close-btn']} onClick={handleClose}>X</button>
+        <button className={styles['modal__close-btn']} onClick={handleClose}>
+          <CloseIcon className={styles['modal__close-btn-icon']} />
+        </button>
       </div>
       <div className={styles['modal__body']}>{children}</div>
     </Modal>

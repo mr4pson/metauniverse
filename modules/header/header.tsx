@@ -8,6 +8,7 @@ import ModalWindow from 'ui-kit/modal-window';
 import { useEffect, useState } from 'react';
 import { useModal } from 'modules/modal/use-modal';
 import { Modal } from 'modules/modal/modal';
+import { MenuIcon } from 'public/icons/menu-icon';
 
 const Header = (): JSX.Element => {
   const router = useRouter();
@@ -28,14 +29,10 @@ const Header = (): JSX.Element => {
     <div className={styles["header"]}>
       <div className={classNames("container", styles["container"])}>
         <div className={styles["header__logo-links-wrapper"]}>
-          <Image
+          <div
             className={styles['header__logo']}
             onClick={() => router.push('/')}
-            src="/assets/Logo.png"
-            alt="Logo"
-            width="67"
-            height="53"
-          />
+          ></div>
           <div className={styles['header__links']}>
             {
               getHeaderLinks(setModalContent).map(linkGroup => (
@@ -61,6 +58,9 @@ const Header = (): JSX.Element => {
               ))
             }
           </div>
+          <button className={styles["header__menu-btn"]}>
+            <MenuIcon />
+          </button>
         </div>
       </div>
        <Modal

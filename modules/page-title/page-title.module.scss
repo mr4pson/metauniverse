@@ -37,3 +37,27 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .page-title {
+    &__wrapped-text {
+      margin-left: 12px;
+
+      &::before {
+        top: 2px;
+        left: 2px;
+      }
+      
+      span {
+        font-size: 40px;
+        padding: 1.5px 8px 4.5px;
+        letter-spacing: -2px;
+      }
+    }
+
+    &__normal-text {
+      font-size: 40px;
+      letter-spacing: -2px;
+    }
+  }
+}

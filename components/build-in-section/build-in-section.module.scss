@@ -59,3 +59,53 @@
     max-width: 400px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .build-in-section {
+    border-bottom: none;
+
+    &__page-title {
+      & > div {
+        font-size: 38px;
+      }
+  
+      & > div:last-of-type {
+        margin-left: 10px;
+      }
+    }
+
+    &__body {
+      margin-top: 30px;
+    }
+
+    &__next-generation-img-wrapper, &__build-in-img-wrapper {
+      width: 136px;
+      min-width: 136px;
+      height: 112px;
+    }
+
+    &__next-generation-img, &__build-in-img {
+      width: 74px;
+      height: 68px;
+    }
+
+    &__next-generation-text, &__build-in-text {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 22px;
+      max-width: 300px;
+      margin-right: -7px;
+    }
+
+    &__next-generation-text {
+      margin-left: 20px;
+    }
+
+    &__build-in-text  {
+      margin-left: 0;
+      margin-right: 17px;
+      text-align: right;
+      margin-left: -13px;
+    }
+  }
+}

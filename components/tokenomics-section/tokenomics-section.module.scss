@@ -94,3 +94,83 @@
     margin: auto;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .game-features {
+    display: block;
+    margin-top: 5px;
+
+    &__left {
+      margin: 0;
+    }
+
+    &__right {
+      margin-top: 10px;
+      padding-left: 15px;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      & > div:last-child {
+        .game-feature__title {
+          br {
+            &:first-child {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .game-feature {
+    width: 125px;
+
+    &__icon {
+      width: 54px;
+      height: 64px;
+    }
+
+    &__title {
+      margin-top: 10px;
+      font-size: 24px;
+      line-height: 22px;
+      br {
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .burnt-info {
+    margin: auto;
+    text-align: center;
+  }
+
+  .tokenomics-section {
+    padding-bottom: 50px;
+    border-bottom: none;
+    &__footer {
+      flex-direction: column-reverse;
+      gap: 35px;
+      padding-top: 30px;
+    }
+  }
+
+  .total-taxes {
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: center;
+    > span {
+      margin-top: 30px !important;
+    }
+    &__label {
+      font-size: 29px;
+      line-height: 36px;
+      margin-left: 10px;
+      br {
+        display: none;
+      }
+    }
+  }
+}

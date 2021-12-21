@@ -5,8 +5,8 @@ import { Fade } from 'react-awesome-reveal';
 
 const BuildInSection = (): JSX.Element => {
   return (
-    <div className={styles["build-in-section"]}>
-      <div className="container">
+    <div className={classNames(styles["build-in-section"], "build-in-section")}>
+      <div className={classNames("container", "build-in-container")}>
         <SectionTitle
           normalText="Our build-in"
           normalTextBottom="swap & launchpad"

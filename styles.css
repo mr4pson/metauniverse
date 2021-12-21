@@ -22,7 +22,8 @@ body {
 
 .ReactModal__Content--after-open {
   opacity: 1;
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   background-color: #000000 !important;
   color: #02ffb9;
   padding: 0 !important;
@@ -61,7 +62,6 @@ body {
 
 .container {
   width: 100%;
-  /* max-width: 913px; */
   max-width: 990px;
   padding: 0 25px;
   margin: auto;
@@ -70,6 +70,36 @@ body {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .build-in-section .section-title .page-title_bottom {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 15px;
+  }
+}
 
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .build-in-section .section-title {
+    margin-left: -10%;
+    width: 120%;
+  }
+
+  .build-in-section .section-title .page-title_bottom {
+    font-size: 38px;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .build-in-section .build-in-container {
+    padding: 0 15px;
+  }
+
+  .ReactModal__Content--after-open {
+    max-width: 300px;
+  }
 }

@@ -108,3 +108,53 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .map-item {
+    $self: &;
+
+    &::before, &:first-child::before {
+      height: 87px;
+    }
+
+    &::after {
+      width: 163px;
+    }
+
+    &__info {
+      height: 87px;
+      width: 173px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__date {
+      margin-top: 5px;
+    }
+
+    &--left {
+      #{ $self }__info {
+        left: -165px;
+        padding-right: 10px;
+      }
+
+      &::after {
+        left: -163px;
+      }
+    }
+
+    &--right {
+      #{ $self }__info {
+        left: 15px;
+        padding-left: 10px;
+      }
+
+      &::after {
+        left: 21px;
+      }
+    }
+
+  }
+}

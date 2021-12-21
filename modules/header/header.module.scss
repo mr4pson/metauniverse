@@ -10,6 +10,10 @@
 
   &__logo {
     cursor: pointer;
+    width: 67px;
+    height: 53px;
+    background-image: url(/assets/Logo.png);
+    background-size: cover;
   }
 
   &__logo-links-wrapper {
@@ -48,6 +52,15 @@
     &_active {
       color: #02ffb9;
     }
+  }
+
+  &__menu-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    display: none;
   }
 }
 
@@ -98,5 +111,33 @@
     &__links {
       padding-left: 65px;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    background: #0c2a22;
+    box-sizing: border-box;
+
+    &__logo {
+      width: 40px !important;
+      height: 31px !important;
+    }
+
+    &__links {
+      display: none;
+    }
+
+    &__logo-links-wrapper {
+      align-items: center;
+    }
+    
+    &__menu-btn {
+      display: flex;
+    }
+  }
+
+  .container {
+    height: 56px;
   }
 }

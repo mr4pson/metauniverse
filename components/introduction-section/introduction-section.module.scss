@@ -37,11 +37,11 @@
     background-image: url(/assets/images/computer.png);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 570px;
-    height: 401px;
+    width: 568px;
+    height: 352px;
     position: absolute;
     left: 415px;
-    top: 150px;
+    top: 205px;
     z-index: 100;
   }
 
@@ -58,6 +58,42 @@
   .introduction-section {
     &__computer {
       display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .introduction-section {
+    padding-top: 60px;
+    border-bottom: none;
+
+    &__page-title {
+      &_bottom {
+        font-size: 40px;
+        margin-top: 10px;
+      }
+    }
+
+    &__computer {
+      position: static;
+      margin: auto;
+      width: 286px;
+      height: 184px;
+      background-image: url(/assets/images/computer-mobile.png);
+    }
+
+    &__page-description {
+      font-size: 24px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      line-height: 22.5px;
+    }
+
+    &__footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 70px;
     }
   }
 }

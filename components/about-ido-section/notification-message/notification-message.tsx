@@ -18,36 +18,44 @@ const NotificationMessage = ({
   <div className={classNames(styles['notification-message'], {
     [styles['notification-message_shown']]: isNotifyShown
   })}>
-    <div className={styles['notification-message__data']}>
-      <span className={styles['notification-message__data-text']}>
-        TIME LEFT UNTIL
-        IDO STARTS: <br />
-        5D 10H 55M 32S
-      </span>
-    </div>
-    <div className={styles['notification-message__body']}>
-      <form onSubmit={handleSubmit} className={styles['notification-message__form']}>
-        <span className={styles['notification-message__body-info']}>
-          Find out all the news before anyone else
+    <div className={styles["notification-message__container"]}>
+      <div className={styles['notification-message__data']}>
+        <span className={styles['notification-message__data-text']}>
+          <span className={styles["notification-message__label"]}>
+            TIME LEFT UNTIL
+            IDO STARTS: <br />
+          </span>
+          <span className={styles["notification-message__timer"]}>
+            5D 10H 55M 32S
+          </span>
         </span>
-        <Input
-          className={styles['notification-message__input']}
-          placeholder='Email address'
-          name="email"
-        />
-        <Button
-          className={styles['notification-message__submit-btn']}
-          type={ButtonTypes.SUBMIT}
-        >
-          NOTIFY ME
-        </Button>
-        <button
-          className={styles['notification-message__close-btn']}
-          onClick={handleNotifyClose}
-        >
-          <CloseIcon className={styles['notification-message__close-btn-icon']} />
-        </button>
-      </form>
+      </div>
+      <div className={styles['notification-message__body']}>
+        <form onSubmit={handleSubmit} className={styles['notification-message__form']}>
+          <span className={styles['notification-message__body-info']}>
+            Find out all the news before anyone else
+          </span>
+          <div className={styles["notification-message__controls"]}>
+            <Input
+              className={styles['notification-message__input']}
+              placeholder='EMAIL ADDRESS'
+              name="email"
+            />
+            <Button
+              className={styles['notification-message__submit-btn']}
+              type={ButtonTypes.SUBMIT}
+            >
+              NOTIFY ME
+            </Button>
+          </div>
+        </form>
+      </div>
+      <button
+        className={styles['notification-message__close-btn']}
+        onClick={handleNotifyClose}
+      >
+        <CloseIcon className={styles['notification-message__close-btn-icon']} />
+      </button>
     </div>
   </div>
 );

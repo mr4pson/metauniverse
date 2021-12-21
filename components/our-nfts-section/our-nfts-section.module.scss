@@ -11,6 +11,11 @@
     gap: 18px;
   }
 
+  &__carousel {
+    width: 100%;
+    display: block;
+  }
+
   &__footer {
     margin: 87px 0;
     display: flex;
@@ -76,6 +81,16 @@
     &__image {
       width: 144px;
       height: 117px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .our-nfts-section {
+    border-bottom: none;
+
+    &__footer {
+      margin: 50px 0 30px;
     }
   }
 }

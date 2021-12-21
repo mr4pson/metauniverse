@@ -33,3 +33,9 @@
     margin-left: 15px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .button {
+    letter-spacing: -2px;
+  }
+}
