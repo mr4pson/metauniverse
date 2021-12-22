@@ -52,11 +52,19 @@
   }
 
   &__next-generation-text, &__build-in-text {
-    margin-left: 31px;
     font-family: 'SFProText';
     font-size: 22px;
     color: #ffffff;
     max-width: 400px;
+  }
+
+  &__next-generation-text {
+    margin-left: 31px;
+  }
+
+  &__build-in-text {
+    margin-right: 31px;
+    text-align: right;
   }
 }
 
