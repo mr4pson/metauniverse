@@ -36,12 +36,12 @@ const NotificationMessage = ({
             </span>
 
             <Countdown
-              className={styles["notification-message__timer"]}
+              className={styles["countdown-timer"]}
               date={countDownTime}
               onTick={() => setCountDownTime(countDownTime)}
               renderer={({ days, hours ,minutes, seconds }) => {
                 return (
-                  <span className="countdown__timer">
+                  <span className={styles["notification-message__timer"]}>
                     {!isCountdownComplete ? `${days}D ${hours}H ${minutes}M ${seconds}S` : 'IDO has started'}
                   </span>
                 );
