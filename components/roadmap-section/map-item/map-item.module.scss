@@ -56,13 +56,14 @@
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
     background: #000;
     border-radius: 50%;
+    z-index: 10;
   }
 
   &::before {
     display: block;
     content: "";
     height: 98px;
-    width: 1.5px;
+    width: 1px;
     background: #02ffb9;
     margin-left: 10px;
   }
@@ -72,10 +73,11 @@
     content: "";
     width: 205px;
     border-bottom-style: solid;
-    border-bottom-width: 1.5px;
+    border-bottom-width: 1px;
     border-image-slice: 1;
     position: absolute;
     bottom: 10px;
+    border-top: 0;
   }
 
   &--left {
