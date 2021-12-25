@@ -21,10 +21,10 @@ const IndexPage = (): JSX.Element => {
   return (
     <>
       <Head>
-        <title>HOME | NEXT REALWORLD</title>
+        <title>Dendy Metaverse</title>
         <meta
           name="description"
-          content="Next.js + SWR codebase containing realworld examples (CRUD, auth, advanced patterns, etc) that adheres to the realworld spec and API"
+          content="Is an innovative DeFi game platform based on the Play-to-Earn concept"
         />
       </Head>
       <Header />
