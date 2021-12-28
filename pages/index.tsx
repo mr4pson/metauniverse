@@ -26,6 +26,10 @@ const IndexPage = (): JSX.Element => {
           name="description"
           content="Is an innovative DeFi game platform based on the Play-to-Earn concept"
         />
+        <meta property="og:title" content="Dendy Metaverse" />
+        <meta property="og:site_name" content="Dendy Metaverse"/>
+        <meta property="og:description" content="Is an innovative DeFi game platform based on the Play-to-Earn concept" />
+        <meta property="og:image" content="/assets/preview.jpg" />
       </Head>
       <Header />
       <div className={styles['page-wrapper']}>

@@ -57,7 +57,9 @@
 @media only screen and (min-width: 769px) and (max-width: 990px) {
   .introduction-section {
     &__computer {
-      display: none;
+      background-image: url(/assets/images/computer-mobile.png);
+      width: 410px;
+      height: 264px;
     }
   }
 }

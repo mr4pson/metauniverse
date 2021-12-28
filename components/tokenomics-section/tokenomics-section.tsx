@@ -63,14 +63,20 @@ const TokenomicsSection = (): JSX.Element => {
           <div className={styles['tokenomics-section__footer']}>
             <Fade duration={1500}>
               <Fade duration={1250} triggerOnce direction="left">
-                <Button
-                  icon={
-                    <RightArrowIcon />
-                  }
-                  onClick={handleOpen}
+                <a
+                  className={styles["tokenomics-section__link"]}
+                  href="https://bscscan.com/address/0x68745256cC11c8EE92cF918a8Cc6BbD2618Cadde#code"
+                  target="_blank"
                 >
-                  View the contract
-                </Button>
+                  <Button
+                    icon={
+                      <RightArrowIcon />
+                    }
+                    onClick={handleOpen}
+                  >
+                    View the contract
+                  </Button>
+                </a>
               </Fade>
             </Fade>
             <Fade duration={1500}>
@@ -92,13 +98,13 @@ const TokenomicsSection = (): JSX.Element => {
           </div>
         </Fade>
       </div>
-      <Modal
+      {/* <Modal
         title="Tokenomics availability"
         text="Will be available on"
         date={<span>JANUARY 1 <br />2022</span>}
         modalIsOpen={modalIsOpen}
         handleClose={handleClose}
-      />
+      /> */}
     </div>
   );
 };

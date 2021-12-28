@@ -12,7 +12,7 @@ const PageTitle = ({ normalText, wrappedText, className }: Props): JSX.Element =
     <div className={classNames(styles["page-title"], className)}>
       <div className={styles["page-title__normal-text"]}>{normalText}</div>
       {
-        wrappedText && <div className={styles["page-title__wrapped-text"]}>
+        wrappedText && <div className={classNames(styles["page-title__wrapped-text"], "page-title__wrapped-text")}>
           <span>{wrappedText}</span>
         </div>
       }

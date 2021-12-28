@@ -2,22 +2,27 @@ export const links = [
   {
     id: 'contract',
     title: 'Contract',
-    link: 'https://bscscan.com/',
+    link: 'https://bscscan.com/address/0x68745256cC11c8EE92cF918a8Cc6BbD2618Cadde#code',
   },
   {
     id: 'buyToken',
     title: 'Buy token',
-    link: 'https://pancakeswap.finance/swap',
+    link: 'https://www.pinksale.finance/#/launchpad/0x338652EcFa58c9ef95415525882626D9919A8A6B?chain=BSC',
   },
   {
     id: 'liveChart',
     title: 'Live chart',
-    link: 'https://www.dextools.io/app/bsc/',
+    link: 'https://poocoin.app/tokens/0x68745256cc11c8ee92cf918a8cc6bbd2618cadde',
   },
   {
     id: 'whitePaper',
     title: 'White Paper',
     link: 'https://dendy-metaverse.gitbook.io/dendymetaverse',
+  },
+  {
+    id: 'github',
+    title: 'Github',
+    link: 'https://github.com/dendymetaverse',
   },
 ];
 
