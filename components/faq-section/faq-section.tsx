@@ -15,8 +15,9 @@ const FaqSection = (): JSX.Element => {
         <div>
           <Fade duration={2500}>
             <Fade className={styles["faq__body"]} triggerOnce duration={1000} direction={'right'} cascade>
-              {questions.map(question => (
+              {questions.map((question, index) => (
                 <Collapse 
+                  key={`question-${index}`}
                   title={question.title}
                   children={question.description}
                 />

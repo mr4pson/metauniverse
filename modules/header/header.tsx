@@ -41,9 +41,14 @@ const Header = (): JSX.Element => {
             ></div>
             <div className={styles['header__links']}>
               {
-                getHeaderLinks(setModalContent).map(linkGroup => (
-                  <div onClick={linkGroup.onClick} className={styles['header__link-group']}>
-                    {/* <Link href={linkGroup.link ?? ''}> TODO: after january 2020 */}
+                getHeaderLinks(setModalContent).map((linkGroup, index) => (
+                  <div 
+                    key={`link-${index}`}
+                    onClick={linkGroup.onClick} className={styles['header__link-group']}
+                  >
+                    <Link 
+                      href={linkGroup.link ?? ''}
+                    >
                       <span className={classNames(
                         styles['header__link'], 
                         { [styles['header__link_active']]: router.pathname === linkGroup.link }
@@ -51,7 +56,7 @@ const Header = (): JSX.Element => {
                       >
                         {linkGroup.title}
                       </span>
-                    {/* </Link> */}
+                    </Link>
                     {
                       linkGroup.isDividerExist && (<div className={
                       classNames(
@@ -90,9 +95,13 @@ const Header = (): JSX.Element => {
           </button>
         </div>
         <div className={styles["mobile-header__body"]}>
-          {getHeaderLinks(setModalContent).map(linkGroup => (
-            <div onClick={linkGroup.onClick} className={styles['mobile-header__link-group']}>
-              {/* <Link href={linkGroup.link ?? ''}> TODO: after january 2020 */}
+          {getHeaderLinks(setModalContent).map((linkGroup, index) => (
+            <div
+              key={`mobile-link-${index}`}
+              onClick={linkGroup.onClick}
+              className={styles['mobile-header__link-group']}
+            >
+              <Link href={linkGroup.link ?? ''}>
                 <span className={classNames(
                   styles['mobile-header__link'], 
                   { [styles['mobile-header__link_active']]: router.pathname === linkGroup.link }
@@ -100,7 +109,7 @@ const Header = (): JSX.Element => {
                 >
                   {linkGroup.title}
                 </span>
-              {/* </Link> */}
+              </Link>
             </div>
           ))}
         </div>

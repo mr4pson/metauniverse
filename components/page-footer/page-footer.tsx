@@ -11,8 +11,12 @@ const PageFooter = (): JSX.Element => {
           <Fade duration={1250} triggerOnce direction="up">
             <h3 className={styles["page-footer__title"]}>Social media:</h3>
             <div className={styles["page-footer__media-icons"]}>
-              {mediaIcons.map((item) => (
-                <a href={item.link} target="_blank">
+              {mediaIcons.map((item, index) => (
+                <a 
+                  key={`media-icon-${index}`}
+                  href={item.link}
+                  target="_blank"
+                >
                   <div
                     className={styles['page-footer__media-icon']}
                     key={item.id}

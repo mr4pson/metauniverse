@@ -1,6 +1,5 @@
 import { SectionTitle } from 'modules';
-import Modal from 'modules/modal/modal';
-import { useModal } from 'modules/modal/use-modal';
+import Link from 'next/link';
 import { RightArrowIcon } from 'public/icons';
 import { Fade, Zoom } from "react-awesome-reveal";
 import { Button } from 'ui-kit';
@@ -9,7 +8,7 @@ import FeatureSectionItem from './feature-section-item';
 import styles from './feature-section.module.scss';
 
 const FeatureSection = (): JSX.Element => {
-  const { modalIsOpen, handleClose, handleOpen } = useModal();
+  // const { modalIsOpen, handleClose, handleOpen } = useModal();
 
   return (
     <div className={styles["feature-section"]}>
@@ -33,24 +32,29 @@ const FeatureSection = (): JSX.Element => {
               </Zoom>
             </div>
             <div className={styles['feature-section__footer']}>
-              <Button
-                icon={
-                  <RightArrowIcon />
-                }
-                onClick={handleOpen}
+              <a
+                className={styles["feature-section__link"]}
+                href="https://www.pinksale.finance/#/launchpad/0x338652EcFa58c9ef95415525882626D9919A8A6B?chain=BSC"
+                target="_blank"
               >
-                Buy now
-              </Button>
+                <Button
+                  icon={
+                    <RightArrowIcon />
+                  }
+                >
+                  Buy now
+                </Button>
+              </a>
             </div>
           </Fade>
       </div>
-      <Modal
+      {/* <Modal
         title="Feature availability"
         text="Will be available on"
         date={<span>JANUARY 1 <br />2022</span>}
         modalIsOpen={modalIsOpen}
         handleClose={handleClose}
-      />
+      /> */}
     </div>
   );
 };

@@ -70,6 +70,21 @@ body {
   overflow: hidden;
 }
 
+
+.our-partners__page-title {
+  display: block !important;
+}
+
+
+.our-partners__page-title .page-title__wrapped-text {
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.our-partners__page-title .page-title__wrapped-text span {
+  font-size: 63px;
+}
+
 @media only screen and (min-width: 769px) and (max-width: 990px) {
   .build-in-section .section-title .page-title_bottom {
     padding-left: 0;
@@ -101,5 +116,9 @@ body {
 
   .ReactModal__Content--after-open {
     max-width: 300px;
+  }
+
+  .our-partners__page-title .page-title__wrapped-text span {
+    font-size: 40px;
   }
 }
