@@ -38,7 +38,7 @@ const TokenomicsSection = (): JSX.Element => {
                     />
                     <div className={styles["burnt-info__title"]}>
                       <div className={styles["burnt-info__label"]}>Total supply:</div>
-                      <div className={styles["burnt-info__value"]}>100 000 000</div>
+                      <div className={styles["burnt-info__val"]}>100 000 000</div>
                     </div>
                   </div>
                 </div>
