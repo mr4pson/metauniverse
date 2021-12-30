@@ -9,22 +9,28 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 96px;
+    max-width: 700px;
+    margin-right: 0;
+    margin-left: auto;
   }
 
   &__link {
     text-decoration: none;
+
+    button {
+      margin: 45px auto;
+    }
   }
 }
 
 .game-features {
-  margin-top: 64px;
+  margin-top: 20px;
   $self: &;
   display: flex;
   align-items: center;
 
   &__left {
-    margin-right: 140px;
+    margin-right: 80px;
     margin-left: 33px;
   }
 
@@ -33,12 +39,11 @@
     align-items: top;
     justify-content: space-between;
     width: 100%;
-    padding-right: 84px;
   }
 }
 
 .burnt-info {
-  width: 125px;
+  width: 135px;
 
   &__title {
     margin-top: 21px;
@@ -52,7 +57,7 @@
   }
   
   &__value {
-    font-size: 36px;
+    font-size: 20px;
   }
 }
 
@@ -79,7 +84,7 @@
   padding-right: 47px;
 
   &__label {
-    font-size: 40px;
+    font-size: 31px;
     line-height: 50px;
     font-family: "SFProText";
     font-weight: 900;
@@ -87,7 +92,44 @@
   }
 }
 
+.pink-sale {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: 0;
+    border: 1px solid #02FFB9;
+  }
+
+  span {
+    position: relative;
+    padding: 13px 23px 17px 33px;
+    box-sizing: border-box;
+    display: block;
+    font-family: "SFProText";
+    font-weight: 900;
+    font-size: 20px;
+    color: black;
+    background: #02FFB9;
+    line-height: 1.25;
+    z-index: 1;
+    height: 80px;
+    width: 260px;
+  }
+}
+
 @media only screen and (min-width: 769px) and (max-width: 990px) {
+  .tokenomics-section {
+    &__footer {
+      margin-top: 30px;
+    }
+  }
+
   .game-features {
     display: block;
     margin-top: 30px;
