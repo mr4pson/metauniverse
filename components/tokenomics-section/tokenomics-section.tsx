@@ -37,8 +37,8 @@ const TokenomicsSection = (): JSX.Element => {
                       height="148px"
                     />
                     <div className={styles["burnt-info__title"]}>
-                      <div className={styles["burnt-info__label"]}>Burnt</div>
-                      <div className={styles["burnt-info__value"]}>0</div>
+                      <div className={styles["burnt-info__label"]}>Total supply:</div>
+                      <div className={styles["burnt-info__value"]}>100 000 000</div>
                     </div>
                   </div>
                 </div>
@@ -62,24 +62,6 @@ const TokenomicsSection = (): JSX.Element => {
           </div>
           <div className={styles['tokenomics-section__footer']}>
             <Fade duration={1500}>
-              <Fade duration={1250} triggerOnce direction="left">
-                <a
-                  className={styles["tokenomics-section__link"]}
-                  href="https://bscscan.com/address/0x68745256cC11c8EE92cF918a8Cc6BbD2618Cadde#code"
-                  target="_blank"
-                >
-                  <Button
-                    icon={
-                      <RightArrowIcon />
-                    }
-                    onClick={handleOpen}
-                  >
-                    View the contract
-                  </Button>
-                </a>
-              </Fade>
-            </Fade>
-            <Fade duration={1500}>
               <Fade duration={1250} triggerOnce direction="right">
                 <div className={styles["total-taxes"]}>
                   <Image
@@ -94,8 +76,31 @@ const TokenomicsSection = (): JSX.Element => {
                   </div>
                 </div>
               </Fade>
+              <Fade duration={1250} triggerOnce direction="right">
+                <div className={styles["pink-sale"]}>
+                  <span>Pinksale KYC'ed Coinscope audited</span>
+                </div>
+              </Fade>
             </Fade>
           </div>
+          <Fade duration={1500}>
+            <Fade duration={1250} triggerOnce direction="left">
+              <a
+                className={styles["tokenomics-section__link"]}
+                href="https://bscscan.com/address/0x68745256cC11c8EE92cF918a8Cc6BbD2618Cadde#code"
+                target="_blank"
+              >
+                <Button
+                  icon={
+                    <RightArrowIcon />
+                  }
+                  onClick={handleOpen}
+                >
+                  View the contract
+                </Button>
+              </a>
+            </Fade>
+          </Fade>
         </Fade>
       </div>
       {/* <Modal
