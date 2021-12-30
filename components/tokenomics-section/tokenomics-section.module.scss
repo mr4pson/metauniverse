@@ -206,7 +206,6 @@
     border-bottom: none;
     &__footer {
       flex-direction: column-reverse;
-      gap: 35px;
       padding-top: 30px;
     }
   }
@@ -214,6 +213,7 @@
   .total-taxes {
     padding-right: 30px;
     padding-left: 30px;
+    margin-top: 35px;
     text-align: center;
     > span {
       margin-top: 30px !important;

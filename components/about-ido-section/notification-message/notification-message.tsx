@@ -12,7 +12,7 @@ type Props = {
   handleNotifyClose: () => void;
 }
 
-const END_DATE_TIME = new Date(2022, 0, 12, 14).getTime();
+const END_DATE_TIME = new Date(2022, 0, 12, 17).getTime();
 
 const NotificationMessage = ({
   isNotifyShown,
