@@ -8,6 +8,7 @@ import { Button } from 'ui-kit';
 import styles from './about-ido-section.module.scss';
 import { getSteps } from './helper';
 import NotificationMessage from './notification-message';
+import axios from "axios";
 
 const AboutIdoSection = (): JSX.Element => {
   // const { modalIsOpen, handleClose: handleModalClose, handleOpen: handleModalOpen } = useModal();
@@ -18,22 +19,26 @@ const AboutIdoSection = (): JSX.Element => {
 
   const size = useWindowSize();
 
-  const handleSubmit = (e) => {
-    console.log(e.target.email.value);
-    if (e.target.email.value) {
-      e.target.email.value = "";
-    }
-
-    e.preventDefault();
-  }
-
   const handleScroll = (): void => {
     setScrollY(window.scrollY);
   };
 
   const handleNotifyClose = (): void => {
-    setNotifyShown(false)
+    setNotifyShown(false);
     window.removeEventListener("scroll", handleScroll);
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let email = e.target.email.value;
+    if (email) {
+      const response = await axios.get(`/api/subscribe?email=${email}`);
+      console.log(response);
+      email = "";
+      handleNotifyClose();
+    }
+
+    e.preventDefault();
   }
 
   useEffect(() => {
