@@ -100,9 +100,9 @@ const OurNftsSection = (): JSX.Element => {
         </Fade>
       </div>
       <Modal
-        title="NFTs availability"
+        title="Page availability"
         text="Will be available on"
-        date={<span>FEBRUARY <br />2022</span>}
+        date={<span>March, 2022</span>}
         modalIsOpen={modalIsOpen}
         handleClose={handleClose}
       />

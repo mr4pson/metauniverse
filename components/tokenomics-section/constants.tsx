@@ -17,6 +17,6 @@ export const gameFeatures = [
   },
   {
     icon: "tv-air-drop.png",
-    title: <span>IDO <br />pool: <br />16 180 000</span>
+    title: <span>Tokens burnt: <br />0</span>
   },
 ];
