@@ -1,18 +1,14 @@
 import { getImageUrl } from 'helpers';
 import { SectionTitle } from 'modules';
-import Modal from 'modules/modal/modal';
-import { useModal } from 'modules/modal/use-modal';
 import Image from 'next/image';
 import { RightArrowIcon } from 'public/icons';
 import { memo } from 'react';
+import { Fade } from "react-awesome-reveal";
 import { Button } from 'ui-kit';
 import { gameFeatures } from './constants';
 import styles from './tokenomics-section.module.scss';
-import { Fade } from "react-awesome-reveal";
 
 const TokenomicsSection = (): JSX.Element => {
-  const { modalIsOpen, handleClose, handleOpen } = useModal();
-
   return (
     <div className={styles["tokenomics-section"]}>
       <div className={"container"}>
@@ -62,20 +58,6 @@ const TokenomicsSection = (): JSX.Element => {
           </div>
           <div className={styles['tokenomics-section__footer']}>
             <Fade duration={1500}>
-              {/* <Fade duration={1250} triggerOnce direction="right">
-                <div className={styles["total-taxes"]}>
-                  <Image
-                    className={styles["total-taxes__icon"]}
-                    src={getImageUrl("im.png")}
-                    alt="me"
-                    width="53"
-                    height="53"
-                  />
-                  <div className={styles["total-taxes__label"]}>
-                    Total tax: 10%
-                  </div>
-                </div>
-              </Fade> */}
               <Fade duration={1250} triggerOnce direction="right">
                 <div className={styles["pink-sale"]}>
                   <span>Pinksale KYC'ed Coinscope audited</span>
@@ -94,7 +76,6 @@ const TokenomicsSection = (): JSX.Element => {
                   icon={
                     <RightArrowIcon />
                   }
-                  onClick={handleOpen}
                 >
                   View the contract
                 </Button>
