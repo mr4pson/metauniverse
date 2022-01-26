@@ -16,7 +16,7 @@ const FeatureSection = (): JSX.Element => {
         <SectionTitle
           normalText="Our"
           wrappedText="Features"
-          titleInfo="Decentralized open-source metaverse based on the blockchain Binance Smart Chain"
+          titleInfo="Decentralized open-source metaverse based on Polygon & BSC"
         />
           <Fade duration={3500}>
             <div className={styles['feature-section__body']}>
@@ -34,7 +34,7 @@ const FeatureSection = (): JSX.Element => {
             <div className={styles['feature-section__footer']}>
               <a
                 className={styles["feature-section__link"]}
-                href="https://www.pinksale.finance/#/launchpad/0x338652EcFa58c9ef95415525882626D9919A8A6B?chain=BSC"
+                href="https://pancakeswap.finance/swap?outputCurrency=0x68745256cC11c8EE92cF918a8Cc6BbD2618Cadde"
                 target="_blank"
               >
                 <Button

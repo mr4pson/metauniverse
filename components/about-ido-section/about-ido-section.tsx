@@ -2,62 +2,15 @@ import classNames from 'classnames';
 import { useWindowSize } from 'hooks';
 import { SectionTitle } from 'modules';
 import { RightArrowIcon } from 'public/icons';
-import { useEffect, useState } from 'react';
 import { Fade, Zoom } from "react-awesome-reveal";
 import { Button } from 'ui-kit';
 import styles from './about-ido-section.module.scss';
 import { getSteps } from './helper';
-import NotificationMessage from './notification-message';
-import axios from "axios";
 
 const AboutIdoSection = (): JSX.Element => {
   // const { modalIsOpen, handleClose: handleModalClose, handleOpen: handleModalOpen } = useModal();
 
-  const [scrollY, setScrollY] = useState(0);
-  const [isNotifyShown, setNotifyShown] = useState(false);
-  const [isNotifyWasOpen, setIsNotifyWasOpen] = useState(false);
-
   const size = useWindowSize();
-
-  const handleScroll = (): void => {
-    setScrollY(window.scrollY);
-  };
-
-  const handleNotifyClose = (): void => {
-    setNotifyShown(false);
-    window.removeEventListener("scroll", handleScroll);
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    let email = e.target.email.value;
-    if (email) {
-      const response = await axios.get(`/api/subscribe?email=${email}`);
-      console.log(response);
-      email = "";
-      handleNotifyClose();
-    }
-
-    e.preventDefault();
-  }
-
-  useEffect(() => {
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (scrollY > 7000 && !isNotifyShown && !isNotifyWasOpen) {
-      setTimeout(() => {
-        setNotifyShown(true);
-        setIsNotifyWasOpen(true);
-      }, 3000)
-    }
-  }, [scrollY])
 
   return (
     <div className={styles["about-ido"]}>
@@ -126,11 +79,7 @@ const AboutIdoSection = (): JSX.Element => {
             </div>
           </Zoom>
         </Fade>
-        <NotificationMessage
-          isNotifyShown={isNotifyShown}
-          handleSubmit={handleSubmit}
-          handleNotifyClose={handleNotifyClose}
-        />
+
       </div>
       {/* <Modal
         title="IDO availability"

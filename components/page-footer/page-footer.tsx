@@ -1,9 +1,25 @@
-import { links, mediaIcons, products } from './constants';
+import { links, mediaIcons, getProducts } from './constants';
 import styles from './page-footer.module.scss';
 import { Fade } from 'react-awesome-reveal';
 import classNames from 'classnames';
+import { useEffect, useState } from 'react';
+import { useModal } from 'modules/modal/use-modal';
+import Modal from 'modules/modal';
 
 const PageFooter = (): JSX.Element => {
+  const [modalContent, setModalContent] = useState({
+    text: '',
+    date: '',
+  });
+
+  const { modalIsOpen, handleClose, handleOpen } = useModal();
+
+  useEffect(() => {
+    if (modalContent.text || modalContent.date) {
+      handleOpen();
+    }
+  }, [modalContent])
+
   return (
     <div className={styles["page-footer"]}>
       <div className={styles["page-footer__social-media"]}>
@@ -52,11 +68,11 @@ const PageFooter = (): JSX.Element => {
               <div className={styles["page-footer__group"]}>
                 <h3 className={classNames(styles["page-footer__title"], styles["page-footer__title_bottom"])}>Products:</h3>
                 <div className={styles["page-footer__links"]}>
-                  {products.map(product => (
+                  {getProducts(setModalContent).map(product => (
                     <a
                       className={styles["page-footer__link"]}
                       key={product.id}
-                      href={product.link}
+                      onClick={product.onClick}
                     >
                       {product.title}
                     </a>
@@ -70,6 +86,13 @@ const PageFooter = (): JSX.Element => {
           </Fade>
         </Fade>
       </div>
+      <Modal
+        title="Page availability"
+        text={modalContent.text}
+        date={modalContent.date}
+        modalIsOpen={modalIsOpen}
+        handleClose={handleClose}
+      />
     </div>
   );
 };
