@@ -55,7 +55,7 @@ const OurNftsSection = (): JSX.Element => {
         <SectionTitle
           normalText="Our"
           wrappedText="NFTs"
-          titleInfo="Realized on the basis of the Binance Smart Chain (BSC)"
+          titleInfo="Trade unique in-game NFTs to increase your profit"
           withControls
           handleChooseNftIndex={handleChooseNftIndex}
         />
@@ -102,7 +102,7 @@ const OurNftsSection = (): JSX.Element => {
       <Modal
         title="NFTs availability"
         text="Will be available on"
-        date={<span>JANUARY 17 <br />2022</span>}
+        date={<span>FEBRUARY <br />2022</span>}
         modalIsOpen={modalIsOpen}
         handleClose={handleClose}
       />

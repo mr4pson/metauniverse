@@ -2,67 +2,67 @@ import { MapPointTypes, TMapPoint } from "./types";
 
 export const mapPoints: TMapPoint[] = [
   {
-    title: "Start of development",
-    date: "November 2021",
+    title: "Market analysis & project development",
+    date: "Q4 2021",
     active: true,
     type: MapPointTypes.LEFT
   },
   {
-    title: "Contract security audit",
-    date: "December 2021",
+    title: "Listing BSC token MetaDND on PancakeSwap & PinkSale KYC'ed",
+    date: "January 2022",
     active: true,
     type: MapPointTypes.RIGHT
   },
   {
-    title: "Launching the NFT-Marketplace",
-    date: "January 2022",
-    active: false,
-    type: MapPointTypes.LEFT
-  },
-  {
-    title: "Publication the smart-contract code on Github",
-    date: "January 2022",
-    active: false,
-    type: MapPointTypes.LEFT
-  },
-  {
-    title: "Adding the liquidity pool",
-    date: "January 2022",
-    active: false,
-    type: MapPointTypes.LEFT
-  },
-  {
-    title: "Start of the first game",
+    title: "Listing Polygon token MetaDND on UNISWAP",
     date: "February 2022",
-    active: false,
-    type: MapPointTypes.RIGHT
+    active: true,
+    type: MapPointTypes.LEFT
   },
   {
-    title: "Start of other games",
+    title: "Launching NFT-Marketplace & DENDY SWAP",
+    date: "March 2022",
+    active: false,
+    type: MapPointTypes.LEFT
+  },
+  {
+    title: "Launching of the first game \"Battle City\" & Bug bounty",
     date: "April 2022",
     active: false,
     type: MapPointTypes.LEFT
   },
   {
-    title: "The first rewards halving",
-    date: "June 2022",
+    title: "Launching of the second game \"Super Mario\" & in-game NFTs",
+    date: "May 2022",
     active: false,
     type: MapPointTypes.RIGHT
   },
   {
-    title: "Launching the Crypto-Game Launchpad",
-    date: "August 2022",
+    title: "Launching of the games \"Pac-Man\" & \"Contra\" and in-game NFTs",
+    date: "June - July 2022",
     active: false,
     type: MapPointTypes.LEFT
   },
   {
-    title: "The second rewards halving",
-    date: "October 2022",
+    title: "Full contract security audit",
+    date: "August 2022",
     active: false,
     type: MapPointTypes.RIGHT
   },
   {
-    title: "Launching a Dendy Swap Exchange",
+    title: "DENDY LAUNCHPAD",
+    date: "September 2022",
+    active: false,
+    type: MapPointTypes.LEFT
+  },
+  {
+    title: "Launching the remaining games & in-game NFTs",
+    date: "October - November 2022",
+    active: false,
+    type: MapPointTypes.RIGHT
+  },
+  {
+    title: "Listing on CEX & development mobile app",
     date: "December 2022",
     active: false,
     type: MapPointTypes.LEFT

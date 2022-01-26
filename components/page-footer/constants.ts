@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export const links = [
   {
     id: 'contract',
@@ -7,7 +9,7 @@ export const links = [
   {
     id: 'buyToken',
     title: 'Buy token',
-    link: 'https://www.pinksale.finance/#/launchpad/0x338652EcFa58c9ef95415525882626D9919A8A6B?chain=BSC',
+    link: 'https://pancakeswap.finance/swap?outputCurrency=0x68745256cc11c8ee92cf918a8cc6bbd2618cadde',
   },
   {
     id: 'liveChart',
@@ -26,26 +28,43 @@ export const links = [
   },
 ];
 
-export const products = [
+export const getProducts = (
+  setModalContent: Dispatch<SetStateAction<{
+    text: string;
+    date: string;
+  }>>
+) => [
   {
     id: 'playGames',
     title: 'Play games',
-    link: '',
+    onClick: () => setModalContent({
+      text: 'Will be available on',
+      date: 'April, 2022',
+    }),
   },
   {
     id: 'nftMarketplace',
     title: 'NFT-Marketplace',
-    link: '',
+    onClick: () => setModalContent({
+      text: 'Will be available on',
+      date: 'March, 2022',
+    }),
   },
   {
     id: 'dendySwap',
     title: 'Dendy Swap',
-    link: '',
+    onClick: () => setModalContent({
+      text: 'Will be available',
+      date: 'March, 2022',
+    }),
   },
   {
     id: 'dendyLaunchpad',
     title: 'Dendy Launchpad',
-    link: '',
+    onClick: () => setModalContent({
+      text: 'Will be available',
+      date: 'September, 2022',
+    }),
   },
 ];
 
@@ -53,7 +72,7 @@ export const mediaIcons = [
   {
     id: 'telegram',
     img: 'assets/page-footer-images/Telegram.png',
-    link: 'https://t.me/dendymetaverse',
+    link: 'https://t.me/dendymeta',
   },
   {
     id: 'twitter',

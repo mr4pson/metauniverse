@@ -28,7 +28,7 @@ const NotificationMessage = ({
       [styles['notification-message_shown']]: isNotifyShown
     })}>
       <div className={styles["notification-message__container"]}>
-        <div className={styles['notification-message__data']}>
+        {/* <div className={styles['notification-message__data']}>
           <span className={styles['notification-message__data-text']}>
             <span className={styles["notification-message__label"]}>
               TIME LEFT UNTIL
@@ -49,7 +49,7 @@ const NotificationMessage = ({
               onComplete={() => setIsCountdownComplete(true)}
             />
           </span>
-        </div>
+        </div> */}
         <div className={styles['notification-message__body']}>
           <form onSubmit={handleSubmit} className={styles['notification-message__form']}>
             <span className={styles['notification-message__body-info']}>

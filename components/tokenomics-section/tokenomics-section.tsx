@@ -20,7 +20,7 @@ const TokenomicsSection = (): JSX.Element => {
           normalText="Our"
           wrappedText="Tokenomics"
           titleInfo={
-            <span>Trade unique in-game NFTs to increase<br /> your profit</span>
+            <span>Realized on the basis of Polygon and BSC</span>
           }
         />
         <Fade duration={3500}>
@@ -62,7 +62,7 @@ const TokenomicsSection = (): JSX.Element => {
           </div>
           <div className={styles['tokenomics-section__footer']}>
             <Fade duration={1500}>
-              <Fade duration={1250} triggerOnce direction="right">
+              {/* <Fade duration={1250} triggerOnce direction="right">
                 <div className={styles["total-taxes"]}>
                   <Image
                     className={styles["total-taxes__icon"]}
@@ -75,7 +75,7 @@ const TokenomicsSection = (): JSX.Element => {
                     Total tax: 10%
                   </div>
                 </div>
-              </Fade>
+              </Fade> */}
               <Fade duration={1250} triggerOnce direction="right">
                 <div className={styles["pink-sale"]}>
                   <span>Pinksale KYC'ed Coinscope audited</span>

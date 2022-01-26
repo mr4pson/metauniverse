@@ -1,9 +1,57 @@
-import { SectionTitle } from 'modules';
-import styles from './build-in-section.module.scss';
+import axios from 'axios';
 import classNames from 'classnames';
+import { SectionTitle } from 'modules';
+import { useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import styles from './build-in-section.module.scss';
+import NotificationMessage from './../about-ido-section/notification-message';
 
 const BuildInSection = (): JSX.Element => {
+  const [isNotifyShown, setNotifyShown] = useState(false);
+  const [isNotifyWasOpen, setIsNotifyWasOpen] = useState(false);
+  
+  const [scrollY, setScrollY] = useState(0);
+
+  const handleScroll = (): void => {
+    setScrollY(window.scrollY);
+  };
+
+  const handleNotifyClose = (): void => {
+    setNotifyShown(false);
+    window.removeEventListener("scroll", handleScroll);
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let email = e.target.email.value;
+    if (email) {
+      const response = await axios.get(`/api/subscribe?email=${email}`);
+      console.log(response);
+      email = "";
+      handleNotifyClose();
+    }
+
+    e.preventDefault();
+  }
+
+  useEffect(() => {
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (scrollY > 4000 && !isNotifyShown && !isNotifyWasOpen) {
+      setTimeout(() => {
+        setNotifyShown(true);
+        setIsNotifyWasOpen(true);
+      }, 3000)
+    }
+  }, [scrollY])
+
   return (
     <div className={classNames(styles["build-in-section"], "build-in-section")}>
       <div className={classNames("container", "build-in-container")}>
@@ -47,6 +95,11 @@ const BuildInSection = (): JSX.Element => {
             </Fade>
           </Fade>
         </div>
+        <NotificationMessage
+          isNotifyShown={isNotifyShown}
+          handleSubmit={handleSubmit}
+          handleNotifyClose={handleNotifyClose}
+        />
       </div>
     </div>
   );

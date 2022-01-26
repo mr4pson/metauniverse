@@ -15,7 +15,7 @@ export const getHeaderLinks = (
     isDividerExist: true,
     onClick: () => setModalContent({
       text: 'Will be available on',
-      date: 'February 20, 2022',
+      date: 'April, 2022',
     }),
   },
   {
@@ -25,7 +25,7 @@ export const getHeaderLinks = (
     isDividerExist: true,
     onClick: () => setModalContent({
       text: 'Will be available on',
-      date: 'January 17, 2022',
+      date: 'March, 2022',
     }),
   },
   {
@@ -35,7 +35,7 @@ export const getHeaderLinks = (
     isDividerExist: true,
     onClick: () => setModalContent({
       text: 'Will be available',
-      date: 'soon',
+      date: 'March, 2022',
     }),
   },
   {
@@ -45,13 +45,13 @@ export const getHeaderLinks = (
     isDividerExist: true,
     onClick: () => setModalContent({
       text: 'Will be available',
-      date: 'soon',
+      date: 'September, 2022',
     }),
   },
   {
     id: 'join-community',
     title: 'JOIN COMMUNITY',
-    link: 'https://t.me/dendymetaverse',
+    link: 'https://t.me/dendymeta',
     isDividerExist: false,
     onClick: () => false,
   }

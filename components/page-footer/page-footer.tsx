@@ -1,8 +1,7 @@
-import { links, mediaIcons, products } from './constants';
+import { links, mediaIcons, getProducts } from './constants';
 import styles from './page-footer.module.scss';
 import { Fade } from 'react-awesome-reveal';
 import classNames from 'classnames';
-import { getProductLinks } from './helpers';
 import { useEffect, useState } from 'react';
 import { useModal } from 'modules/modal/use-modal';
 import Modal from 'modules/modal';
@@ -69,16 +68,14 @@ const PageFooter = (): JSX.Element => {
               <div className={styles["page-footer__group"]}>
                 <h3 className={classNames(styles["page-footer__title"], styles["page-footer__title_bottom"])}>Products:</h3>
                 <div className={styles["page-footer__links"]}>
-                  {getProductLinks(setModalContent).map(product => (
-                    <span
+                  {getProducts(setModalContent).map(product => (
+                    <a
                       className={styles["page-footer__link"]}
                       key={product.id}
                       onClick={product.onClick}
                     >
-                      {/* <Link href={linkGroup.link ?? ''}> TODO: after january 2020 */}
                       {product.title}
-                      {/* </Link> */}
-                    </span>
+                    </a>
                     ))}
                 </div>
               </div>
