@@ -41,7 +41,7 @@ const IndexPage = (): JSX.Element => {
         <BuildInSection />
         {/* <OurPartnersSection /> */}
         <FaqSection />
-        {/* <AboutIdoSection /> */}
+        <AboutIdoSection />
         <button
           className={styles["scroll-top-btn"]}
           onClick={goToTopOfPage}

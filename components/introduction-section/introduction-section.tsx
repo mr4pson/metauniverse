@@ -15,11 +15,11 @@ const IntroductionSection = (): JSX.Element => {
         </div>
         <Fade duration={3500} triggerOnce>
           <div className={styles['introduction-section__page-description']}>
-            The Dendy Metaverse is an innovative DeFi game platform based on the Play to Earn concept. 
-            With us you can play the most popular seven 
-            Dendy games straight from your childhood.
-            <br />We also have Dendy Swap and Dandy Launchpad!
-            It's never been easier to earn!
+            Dendy Metaverse is a decentralized open-source platform containing 7 of the most popular games
+            of the 80s and 90s. We rebuilt games in the P2E concept. Just imagine, you will play Super Mario
+            from your childhood and make a profit for it! We are introducing in-game NFTs to improve the profitability
+            of the game and gain additional experience. To make using Dendy Metaverse even easier, we are introducing
+            Dendy SWAP so that you can exchange tokens directly on the platform. We are a community driven project!
           </div>
         </Fade>
         <div className={styles['introduction-section__computer']}></div>

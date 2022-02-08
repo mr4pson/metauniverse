@@ -34,7 +34,7 @@ const FeatureSection = (): JSX.Element => {
             <div className={styles['feature-section__footer']}>
               <a
                 className={styles["feature-section__link"]}
-                href="https://pancakeswap.finance/swap?outputCurrency=0x68745256cC11c8EE92cF918a8Cc6BbD2618Cadde"
+                href="https://www.pinksale.finance/#/launchpad/0x37b7e70318B1341f4A499aa855e3645800862787?chain=Matic"
                 target="_blank"
               >
                 <Button

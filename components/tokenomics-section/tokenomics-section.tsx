@@ -69,7 +69,7 @@ const TokenomicsSection = (): JSX.Element => {
             <Fade duration={1250} triggerOnce direction="left">
               <a
                 className={styles["tokenomics-section__link"]}
-                href="https://bscscan.com/address/0x68745256cC11c8EE92cF918a8Cc6BbD2618Cadde#code"
+                href="https://polygonscan.com/address/0x06c2fb46b3277aa17178e460c6fd9a761330a5d4#code"
                 target="_blank"
               >
                 <Button
