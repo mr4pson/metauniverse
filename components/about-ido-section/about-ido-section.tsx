@@ -7,7 +7,7 @@ import { Button } from 'ui-kit';
 import styles from './about-ido-section.module.scss';
 import { getSteps } from './helper';
 
-const AboutIdoSection = (): JSX.Element => {
+const AboutPreSaleSection = (): JSX.Element => {
   // const { modalIsOpen, handleClose: handleModalClose, handleOpen: handleModalOpen } = useModal();
 
   const size = useWindowSize();
@@ -17,14 +17,14 @@ const AboutIdoSection = (): JSX.Element => {
       <div className="container">
         <SectionTitle
           normalText="About"
-          wrappedText="IDO"
-          titleInfo="IDO is PRESALE of our token"
+          wrappedText="PreSale"
+          titleInfo="Presale member 15% off!"
         />
         <Fade duration={3500}>
           <div className={styles['about-ido__body']}>
             <Fade duration={1250} triggerOnce direction="left">
               <h3 className={styles['about-ido__title']}>
-                HOW CAN I TAKE PART IN IDO? FIVE EASY STEPS TO PROFIT!
+                HOW CAN I TAKE PART IN PRESALE? FIVE EASY STEPS TO PROFIT!
               </h3>
             </Fade>
             <div className={styles['about-ido__steps']}>
@@ -56,7 +56,7 @@ const AboutIdoSection = (): JSX.Element => {
                     <RightArrowIcon />
                   }
                 >
-                  Join IDO
+                  Join PreSale
                 </Button>
               </a>
             </Fade>
@@ -66,7 +66,7 @@ const AboutIdoSection = (): JSX.Element => {
               <div className={styles['about-ido__question']}>
                 <div className={styles['about-ido__big-arrow']} />
                 <span className={styles['about-ido__question-text']}>
-                  Why do I need <br /> to take part in IDO?
+                  Why do I need <br /> to take part in PreSale?
                 </span>
               </div>
               <div className={styles['about-ido__advantages']}>
@@ -92,7 +92,7 @@ const AboutIdoSection = (): JSX.Element => {
   );
 };
 
-export default AboutIdoSection;
+export default AboutPreSaleSection;
 
 export async function getServerSideProps(context): Promise<{ props: {} }> {
   return {
